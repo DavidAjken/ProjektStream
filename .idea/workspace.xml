@@ -14,11 +14,10 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="ProjectId" id="1kmOvUXOGwYn7PvzzNAri9qTxfO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectId" id="1kmLGzdBCDfeaCUPtOwTn75T3W0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,60 +26,131 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Projekt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Projekt" />
+      <module name="hej" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="hej" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="hej" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Projekt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8e924e28-2ef0-45bc-93f6-f22fce549b64" name="Default Changelist" comment="" />
-      <created>1606300732370</created>
+      <changelist id="6593321d-ad87-48cc-a3b6-6b526635f7be" name="Default Changelist" comment="" />
+      <created>1606302532939</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606300732370</updated>
-      <workItem from="1606300733403" duration="696000" />
-      <workItem from="1606301576558" duration="314000" />
+      <updated>1606302532939</updated>
+      <workItem from="1606302534089" duration="54000" />
     </task>
-    <task id="LOCAL-00001" summary="test">
-      <created>1606300792056</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1606300792056</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="570" y="198" key="#Web_Browsers" timestamp="1606301097887">
+    <state x="292" y="62" width="1089" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606302885810">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="570" y="198" key="#Web_Browsers/0.0.1536.824@0.0.1536.824" timestamp="1606301097887" />
-    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1606300791616">
+    <state x="292" y="62" width="1089" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1606302885810" />
+    <state x="568" y="229" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1606302730530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606300791616" />
-    <state x="549" y="151" key="FileChooserDialogImpl" timestamp="1606301388457">
+    <state x="568" y="229" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1606302730530" />
+    <state width="671" height="192" key="GridCell.Tab.0.bottom" timestamp="1606302739383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="151" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606301388457" />
-    <state x="637" y="307" key="Github.ShareDialog" timestamp="1606300739791">
+    <state width="671" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606302739383" />
+    <state width="671" height="192" key="GridCell.Tab.0.center" timestamp="1606302739382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="637" y="307" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1606300739791" />
-    <state x="544" y="114" key="Github.UntrackedFilesDialog" timestamp="1606300753252">
+    <state width="671" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606302739382" />
+    <state width="671" height="192" key="GridCell.Tab.0.left" timestamp="1606302739382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="544" y="114" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606300753252" />
-    <state x="599" y="200" key="svn.repositoryBrowser" timestamp="1606301070020">
+    <state width="671" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606302739382" />
+    <state width="671" height="192" key="GridCell.Tab.0.right" timestamp="1606302739383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="599" y="200" key="svn.repositoryBrowser/0.0.1536.824@0.0.1536.824" timestamp="1606301070020" />
+    <state width="671" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606302739383" />
   </component>
 </project>
