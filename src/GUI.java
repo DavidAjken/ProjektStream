@@ -15,7 +15,7 @@ public class GUI {
 
 
     GUI() throws FileNotFoundException {
-        loadText();
+        loadFilmText();
     }
     private void makeFrame()    {
         frame = new JFrame("GUI");
@@ -27,7 +27,7 @@ public class GUI {
         frame.setVisible(true);
     }
 
-    public void loadText() throws FileNotFoundException {
+    public void loadFilmText() throws FileNotFoundException {
         Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("film.txt"));
         ArrayList<Film> films = new ArrayList<Film>();
         sc.useDelimiter("\\s*;\\s*");
