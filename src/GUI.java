@@ -15,18 +15,25 @@ public class GUI {
 
 
     GUI() throws FileNotFoundException {
+        makeFrame();
+
         loadFilmText();
+        loadFilmImages();
     }
+
     private void makeFrame()    {
         frame = new JFrame("GUI");
         frame.setSize(400,400);
 
         Container contentPane = frame.getContentPane();
-        contentPane.setLayout(new GridLayout(1,2));
+        contentPane.setLayout(new GridLayout(2,1));
 
         frame.setVisible(true);
     }
 
+    /*
+    Denne metode loader alt fra film.txt ind i en arraylist af film
+     */
     public void loadFilmText() throws FileNotFoundException {
         Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("film.txt"));
         ArrayList<Film> films = new ArrayList<Film>();
@@ -48,5 +55,10 @@ public class GUI {
         }
     }
 
+    public void loadFilmImages(){
+        Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("filmplakater"));
+        Container contentPane = frame.getContentPane();//skal ændres inden ferdigørrelse
+
+    }
 
 }
