@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import javax.swing.*;
 
 public class Film {
     protected String filmName;
@@ -6,11 +6,16 @@ public class Film {
     protected int year;
     protected double rating;
 
+
+
+    protected ImageIcon filmImg;
+
     public Film(String filmName, String[] genres, int year, double rating) {
         this.filmName = filmName;
         this.genres = genres;
         this.year = year;
         this.rating = rating;
+        filmImg = null;
     }
 
     public String getFilmName() {
@@ -43,6 +48,14 @@ public class Film {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public ImageIcon getFilmImg() {
+        return filmImg;
+    }
+
+    public void setFilmImg(ImageIcon filmImg) {
+        this.filmImg = filmImg;
     }
 
     public void print(){
