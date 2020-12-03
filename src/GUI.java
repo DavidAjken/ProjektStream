@@ -100,16 +100,16 @@ public class GUI {
         HashMap filmImages = new HashMap<String, ImageIcon>();
 
         if (filmDir.isDirectory()) {
-            for (File f : filmDir.listFiles(IMAGE_FILTER)) {
-                filmImg = new ImageIcon(ImageIO.read(f));
-                filmImages.put(f.getName().split(".jpg")[0], filmImg);
+            for (File file : filmDir.listFiles(IMAGE_FILTER)) {
+                filmImg = new ImageIcon(ImageIO.read(file));
+                filmImages.put(file.getName().split(".jpg")[0], filmImg);
             }
         }
 
-        for (Film f : films) {
-            String key = f.getFilmName();
+        for (Film film : films) {
+            String key = film.getFilmName();
             filmImg = (ImageIcon) filmImages.get(key);
-            f.setFilmImg(filmImg);
+            film.setFilmImg(filmImg);
         }
 
 
@@ -152,8 +152,8 @@ public class GUI {
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
         ImageIcon filmImg = null;
-        for (Film f : films) {
-            filmImg = f.getFilmImg();
+        for (Film film : films) {
+            filmImg = film.getFilmImg();
 
             JButton newFilm = new JButton(filmImg);
             newFilm.setHorizontalAlignment(0);
@@ -161,7 +161,7 @@ public class GUI {
             newFilm.setBorder(new LineBorder(Color.red, 1));
 
             //herunder håndteres tegningen af texten
-            newFilm.setText(f.getFilmName());
+            newFilm.setText(film.getFilmName());
             newFilm.setHorizontalTextPosition(0);
             newFilm.setVerticalTextPosition(3);
             newFilm.setForeground(new Color(255, 255, 255));
@@ -173,7 +173,7 @@ public class GUI {
 
             //herunder bliver der tilsat en action til newFilm
             newFilm.addActionListener(
-                    e -> f.popupInfo(frame)
+                    e -> film.popupInfo(frame)
             );
 
             filmBox.add(newFilm);
