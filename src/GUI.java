@@ -18,9 +18,11 @@ import javax.swing.border.LineBorder;
 public class GUI {
 
     //Dette er den JFrame som bliver vist når programmet kørre
-    protected JFrame frame;
+    private JFrame frame;
     //Denne ArrayList indeholder alle filmne
-    protected ArrayList<Film> films;
+    private ArrayList<Film> films;
+    //Denne MenuGui håndtere alt hvad menuen kan
+    private MenuGui menuGui;
 
     //laver en fil som indeholder alle filmplakaterne
     static final File filmDir = new File("src/filmplakater");
@@ -39,6 +41,7 @@ public class GUI {
 
     GUI() throws FileNotFoundException, IOException {
         films = new ArrayList<Film>();
+        menuGui = new MenuGui();
         loadFilmText();
         loadFilmImages();
         makeFrame();
@@ -48,6 +51,7 @@ public class GUI {
 
         frame = new JFrame("GUI");
         frame.setSize(1500, 800);
+
 
         Container framePane = frame.getContentPane();
 
@@ -61,6 +65,7 @@ public class GUI {
         drawMenuGui(contentPane);
         drawFilms(contentPane);
         frame.setVisible(true);
+        menuGui.krigsFilm(contentPane);
     }
 
     /*
@@ -111,7 +116,7 @@ public class GUI {
     private void drawMenuGui(Container contentPane) {
 
 
-        JPanel menuGuiPanel = new JPanel();
+        JPanel menuGuiPanel = new JPanel();     
 
         menuGuiPanel.setMaximumSize(new Dimension(contentPane.getWidth(), 100));
         menuGuiPanel.setPreferredSize(new Dimension(contentPane.getWidth(), 100));
@@ -120,7 +125,7 @@ public class GUI {
         menuGuiPanel.setBackground(Color.black);
         menuGuiPanel.setBorder(new LineBorder(Color.red, 5));
 
-        menuGuiPanel.add(new MenuGui());
+        menuGuiPanel.add(menuGui);
 
         contentPane.add(menuGuiPanel, BorderLayout.NORTH);
     }
