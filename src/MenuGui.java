@@ -46,8 +46,7 @@ public class MenuGui extends Container {
     public void krigsFilm(Container container){
 
 
-        container.update(new Container());
-
+    
 
     }
 }

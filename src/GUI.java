@@ -12,10 +12,7 @@ import java.util.Scanner;
 import java.util.concurrent.Flow;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-<<<<<<< HEAD
-import javax.swing.border.CompoundBorder;
-=======
->>>>>>> Menu-gui
+
 import javax.swing.border.LineBorder;
 
 
@@ -54,19 +51,10 @@ public class GUI {
     private void makeFrame() {
 
         frame = new JFrame("GUI");
-<<<<<<< HEAD
-        frame.setSize(800,800);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-=======
         frame.setSize(1500, 800);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-
-        Container framePane = frame.getContentPane();
-
-        Container contentPane = new Container();
-        framePane.add(contentPane);
->>>>>>> Menu-gui
-
+        Container contentPane = frame.getContentPane();
         contentPane.setBackground(new Color(155, 5, 5));
         contentPane.setLayout(new BorderLayout());
 
@@ -166,15 +154,9 @@ public class GUI {
             newFilm.setForeground(new Color(255, 255, 255));
 
             //herunder bliver newFilm's størrelse sat
-<<<<<<< HEAD
             newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
             newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
             newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
-=======
-            newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 20));
-            newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 20));
-            newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 20));
->>>>>>> Menu-gui
 
             filmBox.add(newFilm);
 
