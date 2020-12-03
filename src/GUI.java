@@ -11,6 +11,7 @@ import java.util.Locale;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.CompoundBorder;
 
 
 public class GUI {
@@ -49,6 +50,7 @@ public class GUI {
 
         frame = new JFrame("GUI");
         frame.setSize(800,800);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         Container contentPane = frame.getContentPane();
         contentPane.setLayout(new GridLayout(2,1));
@@ -114,8 +116,10 @@ public class GUI {
         for (Film f: films) {
             filmImg = f.getFilmImg();
 
-            JLabel newFilm = new JLabel(filmImg);
+            JButton newFilm = new JButton(filmImg);
             newFilm.setHorizontalAlignment(0);
+            newFilm.setBackground(new Color(0,0,0));
+            newFilm.setBorder(new CompoundBorder());
 
             //herunder håndteres tegningen af texten
             newFilm.setText(f.getFilmName());
