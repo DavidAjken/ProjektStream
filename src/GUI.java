@@ -12,6 +12,7 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
+import javax.swing.border.LineBorder;
 
 
 public class GUI {
@@ -119,7 +120,7 @@ public class GUI {
             JButton newFilm = new JButton(filmImg);
             newFilm.setHorizontalAlignment(0);
             newFilm.setBackground(new Color(0,0,0));
-            newFilm.setBorder(new CompoundBorder());
+            newFilm.setBorder(new LineBorder(Color.red, 1));
 
             //herunder håndteres tegningen af texten
             newFilm.setText(f.getFilmName());
@@ -128,9 +129,9 @@ public class GUI {
             newFilm.setForeground(new Color(255,255,255));
 
             //herunder bliver newFilm's størrelse sat
-            newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+20));
-            newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+20));
-            newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+20));
+            newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
+            newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
+            newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
 
             filmBox.add(newFilm);
 
