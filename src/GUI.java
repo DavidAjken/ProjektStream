@@ -9,18 +9,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.concurrent.Flow;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+<<<<<<< HEAD
 import javax.swing.border.CompoundBorder;
+=======
+>>>>>>> Menu-gui
 import javax.swing.border.LineBorder;
 
 
 public class GUI {
 
     //Dette er den JFrame som bliver vist når programmet kørre
-    protected JFrame frame;
+    private JFrame frame;
     //Denne ArrayList indeholder alle filmne
-    protected ArrayList<Film> films;
+    private ArrayList<Film> films;
+    //Denne MenuGui håndtere alt hvad menuen kan
+    private MenuGui menuGui;
 
     //laver en fil som indeholder alle filmplakaterne
     static final File filmDir = new File("src/filmplakater");
@@ -29,7 +35,7 @@ public class GUI {
     static final FilenameFilter IMAGE_FILTER = new FilenameFilter() {
         @Override
         public boolean accept(File dir, String name) {
-            if(name.endsWith(".jpg")){
+            if (name.endsWith(".jpg")) {
                 return true;
             }
             return false;
@@ -37,11 +43,9 @@ public class GUI {
     };
 
 
-
-
-
-    GUI() throws FileNotFoundException, IOException{
+    GUI() throws FileNotFoundException, IOException {
         films = new ArrayList<Film>();
+        menuGui = new MenuGui();
         loadFilmText();
         loadFilmImages();
         makeFrame();
@@ -50,14 +54,27 @@ public class GUI {
     private void makeFrame() {
 
         frame = new JFrame("GUI");
+<<<<<<< HEAD
         frame.setSize(800,800);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+=======
+        frame.setSize(1500, 800);
 
-        Container contentPane = frame.getContentPane();
-        contentPane.setLayout(new GridLayout(2,1));
 
+        Container framePane = frame.getContentPane();
+
+        Container contentPane = new Container();
+        framePane.add(contentPane);
+>>>>>>> Menu-gui
+
+        contentPane.setBackground(new Color(155, 5, 5));
+        contentPane.setLayout(new BorderLayout());
+
+
+        drawMenuGui(contentPane);
         drawFilms(contentPane);
         frame.setVisible(true);
+        menuGui.krigsFilm(contentPane);
     }
 
     /*
@@ -67,7 +84,7 @@ public class GUI {
         Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("film.txt"));
         sc.useDelimiter("\\s*;\\s*");
 
-        while (sc.hasNext()){
+        while (sc.hasNext()) {
             String filmName = sc.next();
             int filmYear = sc.nextInt();
             String[] filmGenres;
@@ -75,7 +92,7 @@ public class GUI {
             filmGenres = tempGenres.split(",");
 
             double rating = sc.nextDouble();
-            Film film = new Film(filmName,filmGenres,filmYear,rating);
+            Film film = new Film(filmName, filmGenres, filmYear, rating);
             films.add(film);
         }
     }
@@ -87,16 +104,16 @@ public class GUI {
     private void loadFilmImages() throws IOException {
 
         ImageIcon filmImg = null;
-        HashMap filmImages = new HashMap<String,ImageIcon>();
+        HashMap filmImages = new HashMap<String, ImageIcon>();
 
-        if(filmDir.isDirectory()){
-            for (File f: filmDir.listFiles(IMAGE_FILTER)) {
+        if (filmDir.isDirectory()) {
+            for (File f : filmDir.listFiles(IMAGE_FILTER)) {
                 filmImg = new ImageIcon(ImageIO.read(f));
                 filmImages.put(f.getName().split(".jpg")[0], filmImg);
             }
         }
 
-        for (Film f: films) {
+        for (Film f : films) {
             String key = f.getFilmName();
             filmImg = (ImageIcon) filmImages.get(key);
             f.setFilmImg(filmImg);
@@ -105,16 +122,36 @@ public class GUI {
 
     }
 
-    private void drawFilms(Container contentPane){
+    private void drawMenuGui(Container contentPane) {
+
+
+        JPanel menuGuiPanel = new JPanel();     
+
+        menuGuiPanel.setMaximumSize(new Dimension(contentPane.getWidth(), 100));
+        menuGuiPanel.setPreferredSize(new Dimension(contentPane.getWidth(), 100));
+        menuGuiPanel.setMinimumSize(new Dimension(contentPane.getWidth(), 100));
+        menuGuiPanel.setLayout(new GridLayout(1, 5));
+        menuGuiPanel.setBackground(Color.black);
+        menuGuiPanel.setBorder(new LineBorder(Color.red, 5));
+
+        menuGuiPanel.add(menuGui);
+
+        contentPane.add(menuGuiPanel, BorderLayout.NORTH);
+    }
+
+    private void drawFilms(Container contentPane) {
+
+
         Container filmScrollPane = new ScrollPane();
-        filmScrollPane.setBackground(new Color(5,5,5));
-        filmScrollPane.doLayout();
+
+        filmScrollPane.setSize(contentPane.getWidth(), 850);
+        filmScrollPane.setBackground(Color.black);
 
         Container filmBox = new Container();
-        filmBox.setLayout(new GridLayout(0,8,10,10));
+        filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
         ImageIcon filmImg = null;
-        for (Film f: films) {
+        for (Film f : films) {
             filmImg = f.getFilmImg();
 
             JButton newFilm = new JButton(filmImg);
@@ -126,18 +163,29 @@ public class GUI {
             newFilm.setText(f.getFilmName());
             newFilm.setHorizontalTextPosition(0);
             newFilm.setVerticalTextPosition(3);
-            newFilm.setForeground(new Color(255,255,255));
+            newFilm.setForeground(new Color(255, 255, 255));
 
             //herunder bliver newFilm's størrelse sat
+<<<<<<< HEAD
             newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
             newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
             newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
+=======
+            newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 20));
+            newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 20));
+            newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 20));
+>>>>>>> Menu-gui
 
             filmBox.add(newFilm);
 
         }
+
+
         filmScrollPane.add(filmBox);
-        contentPane.add(filmScrollPane);
+
+
+        contentPane.add(filmScrollPane, BorderLayout.SOUTH);
     }
+
 
 }
