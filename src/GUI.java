@@ -158,6 +158,11 @@ public class GUI {
             newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
             newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
 
+            //herunder bliver der tilsat en action til newFilm
+            newFilm.addActionListener(
+                    e -> f.popupInfo(frame)
+            );
+
             filmBox.add(newFilm);
 
         }

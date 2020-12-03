@@ -1,11 +1,12 @@
 import javax.swing.*;
+import javax.swing.Popup;
+import java.awt.*;
 
 public class Film {
     protected String filmName;
     protected String[] genres;
     protected int year;
     protected double rating;
-
 
 
     protected ImageIcon filmImg;
@@ -58,7 +59,24 @@ public class Film {
         this.filmImg = filmImg;
     }
 
-    public void print(){
-        System.out.println(filmName+year+genres[0]+rating);
+    private String genreToString(){
+        String genreString = new String();
+        for (String s: genres) {
+            genreString += s+" ";
+        }
+        return genreString;
+    }
+
+    public void print() {
+        System.out.println(filmName + year + genres[0] + rating);
+    }
+
+    public void popupInfo(JFrame frame) {
+
+        //JOptionPane info = new JOptionPane("hej",);
+        JOptionPane.showMessageDialog(frame,"Film navn "+filmName+"\n Genre: "+genreToString()+
+                        "\n Udgivelsees år: "+year+"\n Bedømmese: "+rating,
+                filmName,JOptionPane.PLAIN_MESSAGE);
+
     }
 }
