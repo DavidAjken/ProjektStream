@@ -39,6 +39,8 @@ public class GUI {
         }
     };
 
+    Dimension menuDimension;
+    Dimension mediaDimension;
 
     GUI() throws FileNotFoundException, IOException {
         films = new ArrayList<Film>();
@@ -53,6 +55,9 @@ public class GUI {
         frame = new JFrame("GUI");
         frame.setSize(1500, 800);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        menuDimension = new Dimension(frame.getWidth(), 100);
+        mediaDimension = new Dimension(frame.getWidth(), frame.getHeight()-135);
 
         Container contentPane = frame.getContentPane();
         contentPane.setBackground(new Color(155, 5, 5));
@@ -113,11 +118,11 @@ public class GUI {
     private void drawMenuGui(Container contentPane) {
 
 
-        JPanel menuGuiPanel = new JPanel();     
+        JPanel menuGuiPanel = new JPanel();
 
-        menuGuiPanel.setMaximumSize(new Dimension(contentPane.getWidth(), 100));
-        menuGuiPanel.setPreferredSize(new Dimension(contentPane.getWidth(), 100));
-        menuGuiPanel.setMinimumSize(new Dimension(contentPane.getWidth(), 100));
+        menuGuiPanel.setMaximumSize(menuDimension);
+        menuGuiPanel.setPreferredSize(menuDimension);
+        menuGuiPanel.setMinimumSize(menuDimension);
         menuGuiPanel.setLayout(new GridLayout(1, 5));
         menuGuiPanel.setBackground(Color.black);
         menuGuiPanel.setBorder(new LineBorder(Color.red, 5));
@@ -129,6 +134,14 @@ public class GUI {
 
     private void drawFilms(Container contentPane) {
 
+        //herunder indsteillles det JPanel som filmområdet bilver tejnet på
+        JPanel filmPanel = new JPanel();
+        filmPanel.setMaximumSize(mediaDimension);
+        filmPanel.setPreferredSize(mediaDimension);
+        filmPanel.setMinimumSize(mediaDimension);
+        filmPanel.setLayout(new GridLayout(1, 5));
+        filmPanel.setBackground(Color.black);
+        filmPanel.setBorder(new LineBorder(Color.red, 5));
 
         Container filmScrollPane = new ScrollPane();
 
@@ -144,7 +157,7 @@ public class GUI {
 
             JButton newFilm = new JButton(filmImg);
             newFilm.setHorizontalAlignment(0);
-            newFilm.setBackground(new Color(0,0,0));
+            newFilm.setBackground(new Color(0, 0, 0));
             newFilm.setBorder(new LineBorder(Color.red, 1));
 
             //herunder håndteres tegningen af texten
@@ -154,9 +167,9 @@ public class GUI {
             newFilm.setForeground(new Color(255, 255, 255));
 
             //herunder bliver newFilm's størrelse sat
-            newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
-            newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
-            newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(),filmImg.getIconHeight()+25));
+            newFilm.setMaximumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+            newFilm.setPreferredSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+            newFilm.setMinimumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
 
             //herunder bliver der tilsat en action til newFilm
             newFilm.addActionListener(
@@ -167,11 +180,10 @@ public class GUI {
 
         }
 
-
         filmScrollPane.add(filmBox);
 
-
-        contentPane.add(filmScrollPane, BorderLayout.SOUTH);
+        filmPanel.add(filmScrollPane);
+        contentPane.add(filmPanel, BorderLayout.SOUTH);
     }
 
 
