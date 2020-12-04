@@ -149,7 +149,6 @@ public class GUI {
         Container filmBox = new Container();
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
-        ImageIcon filmImg = null;
         for (Film film : films) {
 
             //herunder bliver der tilsat en action til newFilm
@@ -160,7 +159,6 @@ public class GUI {
         }
 
         filmScrollPane.add(filmBox);
-
         filmPanel.add(filmScrollPane);
         contentPane.add(filmPanel, BorderLayout.SOUTH);
     }
