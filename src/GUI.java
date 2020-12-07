@@ -102,7 +102,7 @@ public class GUI {
         }
 
         for (Film film : films) {
-            String key = film.getFilmName();
+            String key = film.getName();
             filmImg = (ImageIcon) filmImages.get(key);
             film.setFilmImg(filmImg);
         }

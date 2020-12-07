@@ -9,17 +9,6 @@ import static java.awt.image.BufferedImage.TYPE_INT_RGB;
 
 public class MenuGui {
 
-    KeyListener keyListener = new KeyListener() {
-        public void keyPressed(KeyEvent keyEvent) {}
-
-        public void keyReleased(KeyEvent keyEvent) {
-            searching(KeyEvent.getKeyText(keyEvent.getKeyCode()));
-        }
-
-        public void keyTyped(KeyEvent keyEvent) {}
-
-    };
-
     Container menuContainer;
     Container externalContainer;
     ArrayList<Film> films;
@@ -63,19 +52,15 @@ public class MenuGui {
     Denne metode står for at give plads i siderne så knapperne ikke er lige op af kanterne
      */
     private void addLAndRSpacers(Container container) {
-        JPanel leftSpacer = new JPanel();
-        JPanel rightSpacer = new JPanel();
-        setupSpacer(leftSpacer);
-        setupSpacer(rightSpacer);
-
-        container.add(leftSpacer, BorderLayout.WEST);
-        container.add(rightSpacer, BorderLayout.EAST);
+        container.add(setupSpacer(100, 100), BorderLayout.WEST);
+        container.add(setupSpacer(100, 100), BorderLayout.EAST);
     }
 
-    private void setupSpacer(JPanel spacer) {
-        spacer.setBackground(new Color(5, 5, 255));
-        Dimension prefferdDimention = new Dimension(100, 100);
-        spacer.setPreferredSize(prefferdDimention);
+    private Container setupSpacer(int xSize, int ySize) {
+        Container spacer = new Container();
+        Dimension prefferdDimension = new Dimension(xSize, ySize);
+        spacer.setPreferredSize(prefferdDimension);
+        return spacer;
     }
 
     /*
@@ -152,29 +137,58 @@ public class MenuGui {
     }
 
     public Container searchingAreaSetup() {
-        Container searchingSetup = new Container();
-        searchingSetup.setBackground(Color.black);
-        searchingSetup.setLayout(new BorderLayout());
-
+        Container searchingSetupContainer = new Container();
+        searchingSetupContainer.setBackground(Color.black);
+        searchingSetupContainer.setLayout(new BorderLayout());
 
 
         JPanel searchingTextArea = new JPanel();
         searchingTextArea.setLayout(new BorderLayout());
 
-        searchingTextArea.setPreferredSize(new Dimension(100,25));
+        searchingTextArea.setPreferredSize(new Dimension(100, 25));
+
+        JButton searchButton = new JButton("Press to search");
+        searchingSetupContainer.add(searchButton, BorderLayout.WEST);
+
 
         JTextField searchingText = new JTextField("");
-
         searchingTextArea.add(searchingText, BorderLayout.CENTER);
 
-        searchingText.addKeyListener(keyListener);
+        searchButton.addActionListener(
+                e -> searching(searchingText.getText())
+        );
 
-        searchingSetup.add(searchingTextArea, BorderLayout.EAST);
-        return searchingSetup;
+        searchingSetupContainer.add(searchingTextArea, BorderLayout.CENTER);
+        searchingSetupContainer.add(setupSpacer(100, 25), BorderLayout.NORTH);
+        searchingSetupContainer.add(setupSpacer(100, 25), BorderLayout.SOUTH);
+        return searchingSetupContainer;
     }
 
-    public void searching(String searchingText) {
-        System.out.println(searchingText);
+    public void searching(String searchingText) { //skal ændre så den virker med media klassen
+        if(searchingText.equals("")){
+            movieSelect();
+            return;
+        }
+
+        JPanel filmPanel = (JPanel) externalContainer.getComponent(1);
+        ScrollPane filmScrollPane = (ScrollPane) filmPanel.getComponent(0);
+        filmScrollPane.removeAll();
+        Container filmBox = new Container();
+        filmBox.setLayout(new GridLayout(0, 8, 10, 10));
+
+
+        for (Film media : films) {
+            String mediaName = media.getName();
+            String[] mediaNames = mediaName.split(" ");
+            for (String s : mediaNames) {
+                if (s.equals(searchingText)) {
+                    filmBox.add(media);
+                }
+            }
+
+        }
+
+        filmScrollPane.add(filmBox);
     }
 
 }

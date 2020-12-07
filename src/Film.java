@@ -22,7 +22,7 @@ public class Film extends JButton {
     }
 
 
-    public String getFilmName() {
+    public String getName() {
         return filmName;
     }
 
@@ -74,7 +74,7 @@ public class Film extends JButton {
         setBorder(new LineBorder(Color.red, 1));
 
         //herunder håndteres tegningen af texten
-        setText(getFilmName());
+        setText(getName());
         setHorizontalTextPosition(0);
         setVerticalTextPosition(3);
         setForeground(new Color(255, 255, 255));
