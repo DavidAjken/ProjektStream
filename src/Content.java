@@ -8,8 +8,8 @@ import java.util.Scanner;
 import javax.swing.*;
     //diverse ens metoder i film og serier som kan samles i en abstract klasse
     public abstract class Content {
-        public abstract String[] getGenres();
-        public abstract void setGenres(String[] genres);
+        public abstract String[] getGenre();
+        public abstract void setGenre(String[] genres);
         public abstract double getRating();
         public abstract void setRating(double rating);
         public abstract void print();

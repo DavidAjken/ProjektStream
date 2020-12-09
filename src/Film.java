@@ -2,7 +2,7 @@ import javax.swing.*;
 import javax.swing.Popup;
 import java.awt.*;
 
-public class Film {
+public class Film extends Content {
     protected String filmName;
     protected String[] genres;
     protected int year;

@@ -20,7 +20,7 @@
             return serieName;
         }
 
-        public String[] getGenres() {
+        public String[] getGenre() {
             return genres;
         }
 
@@ -40,7 +40,7 @@
             this.serieName = serieName;
         }
 
-        public void setGenres(String[] genres) {
+        public void setGenre(String[] genres) {
             this.genres = genres;
         }
 
