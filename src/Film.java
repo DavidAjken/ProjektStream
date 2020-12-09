@@ -10,24 +10,16 @@ public class Film extends Content {
     protected String[] genres;
     protected int year;
     protected double rating;
-<<<<<<< HEAD
-    protected ImageIcon filmImg;
-=======
 
-
-<<<<<<< HEAD
     protected ImageIcon img;
->>>>>>> Serier
-=======
-    protected ImageIcon filmImg;
->>>>>>> parent of 4b8f1ab... Content update, samt SerieImg
+
 
     public Film(String filmName, String[] genres, int year, double rating) {
         this.filmName = filmName;
         this.genres = genres;
         this.year = year;
         this.rating = rating;
-        filmImg = null;
+        img = null;
         setupLayout();
     }
 
@@ -65,12 +57,12 @@ public class Film extends Content {
     }
 
     public ImageIcon getFilmImg() {
-        return filmImg;
+        return img;
     }
 
     public void setFilmImg(ImageIcon filmImg) {
         setIcon(filmImg);
-        this.filmImg = filmImg;
+        this.img = filmImg;
 
         //herunder bliver Film's størrelse sat
         setMaximumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));

@@ -18,13 +18,9 @@ public class GUI {
     private JFrame frame;
     //Denne ArrayList indeholder alle filmne
     private ArrayList<Film> films;
-<<<<<<< HEAD
-    //Denne ArrayList indeholder alle serier
-  //  private ArrayList<Media> series;
-=======
+
     //Denne ArrayList indeholder alle serierne
     private ArrayList<Serier> series;
->>>>>>> Serier
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
 
