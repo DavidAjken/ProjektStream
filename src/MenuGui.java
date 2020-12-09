@@ -11,10 +11,10 @@ public class MenuGui {
 
     Container menuContainer;
     Container externalContainer;
-    ArrayList<Film> films;
-    //ArrayList<Media> series;
+    ArrayList<Content> films;
+    ArrayList<Content> series;
 
-    public MenuGui(Container externalContainer, ArrayList<Film> films   /* , ArrayList<Media> series*/ ){
+    public MenuGui(Container externalContainer, ArrayList<Content> films, ArrayList<Content> series) {
         this.externalContainer = externalContainer;
         this.films = films;
         //this.series = series;
@@ -94,7 +94,7 @@ public class MenuGui {
         Container mediaBox = new Container();
         mediaBox.setLayout(new GridLayout(0, 8, 10, 10));
 
-        for (Film film : films) {
+        for (Content film : films) {
             for (String gerne : film.getGenre()) {
                 if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
                     mediaBox.add(film);
@@ -139,6 +139,54 @@ public class MenuGui {
 
 
     /*
+    Denne metode står for det alle valg metoderne skal kunne/have i menuen for film
+     */
+    private void generalSeriesGenreSelect(String genre) {
+        JPanel mediaPanel = (JPanel) externalContainer.getComponent(1);
+        ScrollPane mediaScrollPane = (ScrollPane) mediaPanel.getComponent(0);
+        mediaScrollPane.removeAll();
+        Container mediaBox = new Container();
+        mediaBox.setLayout(new GridLayout(0, 8, 10, 10));
+
+        for (Content serie : series) {
+            for (String gerne : serie.getGenre()) {
+                if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
+                    mediaBox.add(serie);
+                }
+            }
+        }
+        mediaScrollPane.add(mediaBox);
+    }
+
+    /*
+    Denne metode står for at lave war movie knappen
+     */
+    private JButton dramaSeriesButtonSetup() {
+        JButton warMovieButton = generalButtonSetup("DramaSerier");
+        warMovieButton.addActionListener(
+                e -> dramaSeriseSelect()
+        );
+        return warMovieButton;
+    }
+
+    private void dramaSeriseSelect() {
+        generalSeriesGenreSelect("Drama");
+    }
+
+    private JButton seriesButtonSetup() {
+        JButton movieButton = generalButtonSetup("Serier");
+        movieButton.addActionListener(
+                e -> serierSelect()
+        );
+        return movieButton;
+    }
+
+    private void serierSelect() {
+        generalSeriesGenreSelect("");
+    }
+
+
+    /*
     Denne metode står for at lave søgeområdet
      */
     public Container searchingAreaSetup() {
@@ -170,7 +218,7 @@ public class MenuGui {
     }
 
     public void searching(String searchingText) { //skal ændre så den virker med media klassen
-        if(searchingText.equals("")){
+        if (searchingText.equals("")) {
             movieSelect();
             return;
         }
@@ -182,12 +230,12 @@ public class MenuGui {
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
 
-        for (Film media : films) {
-            String mediaName = media.getName();
+        for (Content content : films) {
+            String mediaName = content.getName();
             String[] mediaNames = mediaName.split(" ");
             for (String s : mediaNames) {
                 if (s.equals(searchingText)) {
-                    filmBox.add(media);
+                    filmBox.add(content);
                 }
             }
 

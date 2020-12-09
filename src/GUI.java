@@ -17,10 +17,9 @@ public class GUI {
     //Dette er den JFrame som bliver vist når programmet kørre
     private JFrame frame;
     //Denne ArrayList indeholder alle filmne
-    private ArrayList<Film> films;
-
+    private ArrayList<Content> films;
     //Denne ArrayList indeholder alle serierne
-    private ArrayList<Serier> series;
+    private ArrayList<Content> series;
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
 
@@ -39,13 +38,13 @@ public class GUI {
     };
 
     Dimension menuDimension;
-    Dimension mediaDimension;
+    Dimension contentDimension;
 
     GUI() throws FileNotFoundException, IOException {
         frame = new JFrame("GUI");
-        films = new ArrayList<Film>();
-        //series = new ArrayList<Media>();
-        menuGui = new MenuGui(frame.getContentPane(), films /*, series*/ );
+        films = new ArrayList<Content>();
+        series = new ArrayList<Content>();
+        menuGui = new MenuGui(frame.getContentPane(), films , series );
         loadFilmText();
         loadFilmImages();
         makeFrame();
@@ -57,7 +56,7 @@ public class GUI {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         menuDimension = new Dimension(frame.getWidth(), 100);
-        mediaDimension = new Dimension(frame.getWidth(), frame.getHeight() - 135);
+        contentDimension = new Dimension(frame.getWidth(), frame.getHeight() - 135);
 
         Container contentPane = frame.getContentPane();
         contentPane.setBackground(new Color(155, 5, 5));
@@ -105,10 +104,10 @@ public class GUI {
             }
         }
 
-        for (Film film : films) {
+        for (Content film : films) {
             String key = film.getName();
             filmImg = (ImageIcon) filmImages.get(key);
-            film.setFilmImg(filmImg);
+            film.setImg(filmImg);
         }
 
 
@@ -160,9 +159,9 @@ public class GUI {
 
         //herunder indsteillles det JPanel som filmområdet bilver tejnet på
         JPanel mediaPanel = new JPanel();
-        mediaPanel.setMaximumSize(mediaDimension);
-        mediaPanel.setPreferredSize(mediaDimension);
-        mediaPanel.setMinimumSize(mediaDimension);
+        mediaPanel.setMaximumSize(contentDimension);
+        mediaPanel.setPreferredSize(contentDimension);
+        mediaPanel.setMinimumSize(contentDimension);
         mediaPanel.setLayout(new GridLayout(1, 5));
         mediaPanel.setBackground(Color.black);
         mediaPanel.setBorder(new LineBorder(Color.red, 5));
@@ -175,7 +174,7 @@ public class GUI {
         Container filmBox = new Container();
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
-        for (Film film : films) {
+        for (Content film : films) {
 
             //herunder bliver der tilsat en action til newFilm
             film.addActionListener(
