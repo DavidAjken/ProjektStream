@@ -8,8 +8,6 @@ public class Film extends JButton {
     protected String[] genres;
     protected int year;
     protected double rating;
-
-
     protected ImageIcon filmImg;
 
     public Film(String filmName, String[] genres, int year, double rating) {
