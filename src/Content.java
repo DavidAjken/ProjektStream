@@ -9,35 +9,41 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 //diverse ens metoder i film og serier som kan samles i en abstract klasse
-    public abstract class Content extends JButton{
-        protected String name;
-        protected String[] genres;
-        protected int year;
-        protected double rating;
+    public abstract class Content extends JButton {
+    protected String name;
+    protected String[] genres;
+    protected double rating;
 
-        protected ImageIcon img;
+    protected ImageIcon img;
 
-        public String getName() {
-            return name;
-        }
-        public void setName(String name) {
-            this.name = name;
-        }
-        public String[] getGenre() {
-            return genres;
-        }
-        public void setGenre(String[] genres) {
-            this.genres = genres;
-        }
-        public double getRating() {
-            return rating;
-        }
-        public void setRating(double rating) {
-            this.rating = rating;
-        }
-        public ImageIcon getImg() {
-            return img;
-        }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String[] getGenre() {
+        return genres;
+    }
+
+    public void setGenre(String[] genres) {
+        this.genres = genres;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public ImageIcon getImg() {
+        return img;
+    }
+
     public void setImg(ImageIcon img) {
         setIcon(img);
         this.img = img;
@@ -47,7 +53,7 @@ import javax.swing.border.LineBorder;
         setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
     }
 
-    private void setupLayout(){
+    public void setupLayout() {
         setHorizontalAlignment(0);
         setBackground(new Color(0, 0, 0));
         setBorder(new LineBorder(Color.red, 1));
@@ -59,13 +65,17 @@ import javax.swing.border.LineBorder;
 
     }
 
+    public String genreToString() {
+        String genreString = "";
+        for (String s : genres) {
+            genreString += s + " ";
+        }
+        return genreString;
+    }
 
-
-
-
-
-
-
+    public abstract void popupInfo(JFrame frame);
 }
+
+
 
 
