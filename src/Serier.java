@@ -1,14 +1,17 @@
 
+    import javax.swing.*;
+    import javax.swing.border.LineBorder;
+    import java.awt.*;
     import java.util.ArrayList;
     public class Serier extends Content{
-        protected String serieName;
+        protected String name;
         protected String[] genres;
         protected String year;
         protected double rating;
         protected String[] SE;
 
-        public Serier(String serieName, String[] genres, String year, double rating, String[] SE) {
-            this.serieName = serieName;
+        public Serier(String name, String[] genres, String year, double rating, String[] SE) {
+            this.name = name;
             this.genres = genres;
             this.year = year;
             this.rating = rating;
@@ -16,8 +19,8 @@
         }
         //get og set metoder til serier
 
-        public String getSerieName() {
-            return serieName;
+        public String getName() {
+            return name;
         }
 
         public String[] getGenre() {
@@ -36,8 +39,8 @@
             return SE;
         }
 
-        public void setSerieName(String serieName) {
-            this.serieName = serieName;
+        public void setName(String name) {
+            this.name = name;
         }
 
         public void setGenre(String[] genres) {
@@ -55,8 +58,33 @@
         public void setSE(String[] SE) {
             this.SE = SE;
         }
+        public ImageIcon getImg() {
+            return img;
+        }
+        public void setImg(ImageIcon img) {
+            setIcon(img);
+            this.img = img;
+
+            //herunder bliver Serie's størrelse sat
+            setMaximumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+            setPreferredSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+            setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+        }
+
+        private void setupLayout(){
+            setHorizontalAlignment(0);
+            setBackground(new Color(0, 0, 0));
+            setBorder(new LineBorder(Color.red, 1));
+
+            //herunder håndteres tegningen af texten
+            setText(getName());
+            setHorizontalTextPosition(0);
+            setVerticalTextPosition(3);
+            setForeground(new Color(255, 255, 255));
+
+        }
 
         public void print() {
-            System.out.println(serieName + year + genres[0] + rating + SE[0]);
+            System.out.println(name + year + genres[0] + rating + SE[0]);
         }
     }
