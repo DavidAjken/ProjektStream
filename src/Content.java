@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.Scanner;
 import javax.swing.*;
     //diverse ens metoder i film og serier som kan samles i en abstract klasse
-    public abstract class Content {
+    public abstract class Content extends JButton{
         public abstract String[] getGenre();
         public abstract void setGenre(String[] genres);
         public abstract double getRating();
