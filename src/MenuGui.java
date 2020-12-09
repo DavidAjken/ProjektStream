@@ -136,6 +136,9 @@ public class MenuGui {
         return menuContainer;
     }
 
+    /*
+    Denne metode står for at lave søgeområdet
+     */
     public Container searchingAreaSetup() {
         Container searchingSetupContainer = new Container();
         searchingSetupContainer.setBackground(Color.black);
