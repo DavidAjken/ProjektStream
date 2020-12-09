@@ -10,8 +10,13 @@ public class Film extends Content {
     protected String[] genres;
     protected int year;
     protected double rating;
+<<<<<<< HEAD
     protected ImageIcon filmImg;
+=======
+
+
     protected ImageIcon img;
+>>>>>>> Serier
 
     public Film(String name, String[] genres, int year, double rating) {
         this.name = name;
