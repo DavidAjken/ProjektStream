@@ -12,8 +12,6 @@ import javax.swing.*;
         public abstract void setGenre(String[] genres);
         public abstract double getRating();
         public abstract void setRating(double rating);
-        public abstract void print();
-
 
     }
 

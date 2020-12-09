@@ -3,7 +3,9 @@ import javax.swing.Popup;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
+
 public class Film extends Content {
+
     protected String filmName;
     protected String[] genres;
     protected int year;
@@ -96,4 +98,6 @@ public class Film extends Content {
                         "\n Udgivelsees år: "+year+"\n Bedømmese: "+rating,
                 filmName,JOptionPane.PLAIN_MESSAGE);
     }
+
+
 }

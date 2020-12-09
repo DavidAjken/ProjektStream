@@ -111,6 +111,9 @@ public class GUI {
 
 
     }
+    /*
+    Denne metode loader alt fra serier.txt ind i en arraylist af film
+     */
     private void loadSerierText() throws FileNotFoundException {
         Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("serier.txt"));
         sc.useDelimiter("\\s*;\\s*");
