@@ -14,7 +14,7 @@
             this.rating = rating;
             this.SE = SE;
         }
-        //get og set metoder til serier
+        //get og set metoder til serier, resten er extended til Content
 
 <<<<<<< HEAD
 =======
