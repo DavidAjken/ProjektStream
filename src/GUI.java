@@ -22,6 +22,8 @@ public class GUI {
     private JFrame frame;
     //Denne ArrayList indeholder alle filmne
     private ArrayList<Film> films;
+    //Denne ArrayList indeholder alle serierne
+    private ArrayList<Serier> series;
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
 
@@ -108,6 +110,25 @@ public class GUI {
         }
 
 
+    }
+    private void loadSerierText() throws FileNotFoundException {
+        Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("serier.txt"));
+        sc.useDelimiter("\\s*;\\s*");
+
+        while (sc.hasNext()) {
+            String serieName = sc.next();
+            String serieYear = sc.next();
+            String[] serieGenres;
+            String tempGenres = sc.next();
+            serieGenres = tempGenres.split(",");
+            String[] serieSE;
+            String tempSE = sc.next();
+            serieSE = tempSE.split(",");
+
+            double rating = sc.nextDouble();
+            Serier serie = new Serier(serieName, serieGenres, serieYear, rating, serieSE);
+            series.add(serie);
+        }
     }
 
     private void drawMenuGui(Container contentPane) {
