@@ -18,6 +18,7 @@ public class GUI {
     private JFrame frame;
     //Denne ArrayList indeholder alle filmne
     private ArrayList<Film> films;
+
     //Denne ArrayList indeholder alle serierne
     private ArrayList<Serier> series;
     //Denne MenuGui håndtere alt hvad menuen kan
@@ -25,8 +26,6 @@ public class GUI {
 
     //laver en fil som indeholder alle filmplakaterne
     static final File filmDir = new File("src/filmplakater");
-    //laver en fil som indeholder alle serielakaterne
-    static final File serieDir = new File("src/serieplakater");
 
     //laver et filter der skal bruges til at loade billeder
     static final FilenameFilter IMAGE_FILTER = new FilenameFilter() {
@@ -45,7 +44,8 @@ public class GUI {
     GUI() throws FileNotFoundException, IOException {
         frame = new JFrame("GUI");
         films = new ArrayList<Film>();
-        menuGui = new MenuGui(frame.getContentPane(), films);
+        //series = new ArrayList<Media>();
+        menuGui = new MenuGui(frame.getContentPane(), films /*, series*/ );
         loadFilmText();
         loadFilmImages();
         makeFrame();
@@ -108,7 +108,7 @@ public class GUI {
         for (Film film : films) {
             String key = film.getName();
             filmImg = (ImageIcon) filmImages.get(key);
-            film.setImg(filmImg);
+            film.setFilmImg(filmImg);
         }
 
 
@@ -135,30 +135,6 @@ public class GUI {
             series.add(serie);
         }
     }
-    /*
-   denne metoder loader serieplakater fra serieplakater mappen
-   og tildeler hver serie i ArrayLsiten series en plakat der tilhørre den relevatne serie
-    */
-    private void loadSerierImages() throws IOException {
-
-        ImageIcon serieImg = null;
-        HashMap<String, ImageIcon> serieImages = new HashMap<>();
-
-        if (serieDir.isDirectory()) {
-            for (File file : serieDir.listFiles(IMAGE_FILTER)) {
-                serieImg = new ImageIcon(ImageIO.read(file));
-                serieImages.put(file.getName().split(".jpg")[0], serieImg);
-            }
-        }
-
-        for (Serier serie : series) {
-            String key = serie.getName();
-            serieImg = (ImageIcon) serieImages.get(key);
-            serie.setImg(serieImg);
-        }
-
-
-    }
 
     private void drawMenuGui(Container contentPane) {
 
@@ -183,13 +159,13 @@ public class GUI {
     private void drawFilms(Container contentPane) {
 
         //herunder indsteillles det JPanel som filmområdet bilver tejnet på
-        JPanel filmPanel = new JPanel();
-        filmPanel.setMaximumSize(mediaDimension);
-        filmPanel.setPreferredSize(mediaDimension);
-        filmPanel.setMinimumSize(mediaDimension);
-        filmPanel.setLayout(new GridLayout(1, 5));
-        filmPanel.setBackground(Color.black);
-        filmPanel.setBorder(new LineBorder(Color.red, 5));
+        JPanel mediaPanel = new JPanel();
+        mediaPanel.setMaximumSize(mediaDimension);
+        mediaPanel.setPreferredSize(mediaDimension);
+        mediaPanel.setMinimumSize(mediaDimension);
+        mediaPanel.setLayout(new GridLayout(1, 5));
+        mediaPanel.setBackground(Color.black);
+        mediaPanel.setBorder(new LineBorder(Color.red, 5));
 
         Container filmScrollPane = new ScrollPane();
 
@@ -209,8 +185,8 @@ public class GUI {
         }
 
         filmScrollPane.add(filmBox);
-        filmPanel.add(filmScrollPane);
-        contentPane.add(filmPanel, BorderLayout.SOUTH);
+        mediaPanel.add(filmScrollPane);
+        contentPane.add(mediaPanel, BorderLayout.SOUTH);
     }
 
 

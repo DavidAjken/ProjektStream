@@ -12,10 +12,12 @@ public class MenuGui {
     Container menuContainer;
     Container externalContainer;
     ArrayList<Film> films;
+    //ArrayList<Media> series;
 
-    public MenuGui(Container externalContainer, ArrayList<Film> films) {
+    public MenuGui(Container externalContainer, ArrayList<Film> films   /* , ArrayList<Media> series*/ ){
         this.externalContainer = externalContainer;
         this.films = films;
+        //this.series = series;
         menuGuiSetup();
     }
 
@@ -36,6 +38,10 @@ public class MenuGui {
         filmArea.setLayout(new BorderLayout());
         filmArea.add(movieButtonSetup(), BorderLayout.EAST);
         filmArea.add(warMovieButtonSetup(), BorderLayout.WEST);
+
+        seriesArea.setLayout(new BorderLayout());
+        seriesArea.add(seriesButtonSetup(), BorderLayout.EAST);
+        seriesArea.add(dramaSeriesButtonSetup(), BorderLayout.WEST);
 
         searchingArea.setLayout(new BorderLayout());
         searchingArea.add(searchingAreaSetup(), BorderLayout.CENTER);
@@ -78,24 +84,24 @@ public class MenuGui {
         return button;
     }
 
-    /*
-    Denne metode står for det alle valg metoderne skal kunne/have i menuen
+    /*   /*
+    Denne metode står for det alle valg metoderne skal kunne/have i menuen for film
      */
-    private void generalGenreSelect(String genre) {
-        JPanel filmPanel = (JPanel) externalContainer.getComponent(1);
-        ScrollPane filmScrollPane = (ScrollPane) filmPanel.getComponent(0);
-        filmScrollPane.removeAll();
-        Container filmBox = new Container();
-        filmBox.setLayout(new GridLayout(0, 8, 10, 10));
+    private void generalMovieGenreSelect(String genre) {
+        JPanel mediaPanel = (JPanel) externalContainer.getComponent(1);
+        ScrollPane mediaScrollPane = (ScrollPane) mediaPanel.getComponent(0);
+        mediaScrollPane.removeAll();
+        Container mediaBox = new Container();
+        mediaBox.setLayout(new GridLayout(0, 8, 10, 10));
 
         for (Film film : films) {
             for (String gerne : film.getGenre()) {
                 if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
-                    filmBox.add(film);
+                    mediaBox.add(film);
                 }
             }
         }
-        filmScrollPane.add(filmBox);
+        mediaScrollPane.add(mediaBox);
     }
 
     /*
@@ -110,8 +116,7 @@ public class MenuGui {
     }
 
     private void warMovieSelect() {
-        generalGenreSelect("War");
-
+        generalMovieGenreSelect("War");
     }
 
     /*
@@ -129,12 +134,9 @@ public class MenuGui {
     Denne metode står for at tegne alle filmne på media området
      */
     private void movieSelect() {
-        generalGenreSelect("");
+        generalMovieGenreSelect("");
     }
 
-    public Container getMenuContainer() {
-        return menuContainer;
-    }
 
     /*
     Denne metode står for at lave søgeområdet
@@ -192,6 +194,10 @@ public class MenuGui {
         }
 
         filmScrollPane.add(filmBox);
+    }
+
+    public Container getMenuContainer() {
+        return menuContainer;
     }
 
 }
