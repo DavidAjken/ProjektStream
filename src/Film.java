@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class Film extends Content {
 
-    protected String name;
+    protected String filmName;
     protected String[] genres;
     protected int year;
     protected double rating;
@@ -15,25 +15,29 @@ public class Film extends Content {
 =======
 
 
+<<<<<<< HEAD
     protected ImageIcon img;
 >>>>>>> Serier
+=======
+    protected ImageIcon filmImg;
+>>>>>>> parent of 4b8f1ab... Content update, samt SerieImg
 
-    public Film(String name, String[] genres, int year, double rating) {
-        this.name = name;
+    public Film(String filmName, String[] genres, int year, double rating) {
+        this.filmName = filmName;
         this.genres = genres;
         this.year = year;
         this.rating = rating;
-        img = null;
+        filmImg = null;
         setupLayout();
     }
 
 
     public String getName() {
-        return name;
+        return filmName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFilmName(String filmName) {
+        this.filmName = filmName;
     }
 
     public String[] getGenre() {
@@ -60,18 +64,18 @@ public class Film extends Content {
         this.rating = rating;
     }
 
-    public ImageIcon getImg() {
-        return img;
+    public ImageIcon getFilmImg() {
+        return filmImg;
     }
 
-    public void setImg(ImageIcon img) {
-        setIcon(img);
-        this.img = img;
+    public void setFilmImg(ImageIcon filmImg) {
+        setIcon(filmImg);
+        this.filmImg = filmImg;
 
         //herunder bliver Film's størrelse sat
-        setMaximumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
-        setPreferredSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
-        setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+        setMaximumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+        setPreferredSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+        setMinimumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
     }
 
     private void setupLayout(){
@@ -98,9 +102,9 @@ public class Film extends Content {
     public void popupInfo(JFrame frame) {
 
         //JOptionPane info = new JOptionPane("hej",);
-        JOptionPane.showMessageDialog(frame,"Film navn "+name+"\n Genre: "+genreToString()+
+        JOptionPane.showMessageDialog(frame,"Film navn "+filmName+"\n Genre: "+genreToString()+
                         "\n Udgivelsees år: "+year+"\n Bedømmese: "+rating,
-                name,JOptionPane.PLAIN_MESSAGE);
+                filmName,JOptionPane.PLAIN_MESSAGE);
     }
 
 
