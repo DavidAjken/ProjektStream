@@ -2,11 +2,7 @@ import javax.swing.*;
 
 public class Film extends Content {
 
-    protected String[] genres;
     protected int year;
-    protected double rating;
-
-    protected ImageIcon img;
 
 
     public Film(String filmName, String[] genres, int year, double rating) {

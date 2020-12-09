@@ -1,9 +1,7 @@
 import javax.swing.*;
 
 public class Serier extends Content {
-    protected String[] genres;
     protected String year;
-    protected double rating;
     protected String[] season;
 
     public Serier(String serieName, String[] genres, String year, double rating, String[] season) {

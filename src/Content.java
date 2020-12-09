@@ -8,7 +8,6 @@ import javax.swing.border.LineBorder;
     protected String name;
     protected String[] genres;
     protected double rating;
-
     protected ImageIcon img;
 
     public String getName() {

@@ -17,7 +17,7 @@ public class MenuGui {
     public MenuGui(Container externalContainer, ArrayList<Content> films, ArrayList<Content> series) {
         this.externalContainer = externalContainer;
         this.films = films;
-        //this.series = series;
+        this.series = series;
         menuGuiSetup();
     }
 
