@@ -20,11 +20,15 @@ public class GUI {
     private ArrayList<Film> films;
     //Denne ArrayList indeholder alle serier
   //  private ArrayList<Media> series;
+    //Denne ArrayList indeholder alle serierne
+    private ArrayList<Serier> series;
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
 
     //laver en fil som indeholder alle filmplakaterne
     static final File filmDir = new File("src/filmplakater");
+    //laver en fil som indeholder alle serielakaterne
+    static final File serieDir = new File("src/serieplakater");
 
     //laver et filter der skal bruges til at loade billeder
     static final FilenameFilter IMAGE_FILTER = new FilenameFilter() {
@@ -107,7 +111,53 @@ public class GUI {
         for (Film film : films) {
             String key = film.getName();
             filmImg = (ImageIcon) filmImages.get(key);
-            film.setFilmImg(filmImg);
+            film.setImg(filmImg);
+        }
+
+
+    }
+    /*
+    Denne metode loader alt fra serier.txt ind i en arraylist af film
+     */
+    private void loadSerierText() throws FileNotFoundException {
+        Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("serier.txt"));
+        sc.useDelimiter("\\s*;\\s*");
+
+        while (sc.hasNext()) {
+            String serieName = sc.next();
+            String serieYear = sc.next();
+            String[] serieGenres;
+            String tempGenres = sc.next();
+            serieGenres = tempGenres.split(",");
+            String[] serieSE;
+            String tempSE = sc.next();
+            serieSE = tempSE.split(",");
+
+            double rating = sc.nextDouble();
+            Serier serie = new Serier(serieName, serieGenres, serieYear, rating, serieSE);
+            series.add(serie);
+        }
+    }
+    /*
+   denne metoder loader serieplakater fra serieplakater mappen
+   og tildeler hver serie i ArrayLsiten series en plakat der tilhørre den relevatne serie
+    */
+    private void loadSerierImages() throws IOException {
+
+        ImageIcon serieImg = null;
+        HashMap<String, ImageIcon> serieImages = new HashMap<>();
+
+        if (serieDir.isDirectory()) {
+            for (File file : serieDir.listFiles(IMAGE_FILTER)) {
+                serieImg = new ImageIcon(ImageIO.read(file));
+                serieImages.put(file.getName().split(".jpg")[0], serieImg);
+            }
+        }
+
+        for (Serier serie : series) {
+            String key = serie.getName();
+            serieImg = (ImageIcon) serieImages.get(key);
+            serie.setImg(serieImg);
         }
 
 

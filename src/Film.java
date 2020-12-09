@@ -3,29 +3,32 @@ import javax.swing.Popup;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
-public class Film extends JButton {
-    protected String filmName;
+
+public class Film extends Content {
+
+    protected String name;
     protected String[] genres;
     protected int year;
     protected double rating;
     protected ImageIcon filmImg;
+    protected ImageIcon img;
 
-    public Film(String filmName, String[] genres, int year, double rating) {
-        this.filmName = filmName;
+    public Film(String name, String[] genres, int year, double rating) {
+        this.name = name;
         this.genres = genres;
         this.year = year;
         this.rating = rating;
-        filmImg = null;
+        img = null;
         setupLayout();
     }
 
 
     public String getName() {
-        return filmName;
+        return name;
     }
 
-    public void setFilmName(String filmName) {
-        this.filmName = filmName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String[] getGenre() {
@@ -52,18 +55,18 @@ public class Film extends JButton {
         this.rating = rating;
     }
 
-    public ImageIcon getFilmImg() {
-        return filmImg;
+    public ImageIcon getImg() {
+        return img;
     }
 
-    public void setFilmImg(ImageIcon filmImg) {
-        setIcon(filmImg);
-        this.filmImg = filmImg;
+    public void setImg(ImageIcon img) {
+        setIcon(img);
+        this.img = img;
 
         //herunder bliver Film's størrelse sat
-        setMaximumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
-        setPreferredSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
-        setMinimumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+        setMaximumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+        setPreferredSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+        setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
     }
 
     private void setupLayout(){
@@ -90,9 +93,9 @@ public class Film extends JButton {
     public void popupInfo(JFrame frame) {
 
         //JOptionPane info = new JOptionPane("hej",);
-        JOptionPane.showMessageDialog(frame,"Film navn "+filmName+"\n Genre: "+genreToString()+
+        JOptionPane.showMessageDialog(frame,"Film navn "+name+"\n Genre: "+genreToString()+
                         "\n Udgivelsees år: "+year+"\n Bedømmese: "+rating,
-                filmName,JOptionPane.PLAIN_MESSAGE);
+                name,JOptionPane.PLAIN_MESSAGE);
     }
 
 
