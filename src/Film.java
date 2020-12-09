@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.Popup;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class Film extends Content {
@@ -17,9 +18,11 @@ public class Film extends Content {
         this.year = year;
         this.rating = rating;
         filmImg = null;
+        setupLayout();
     }
 
-    public String getFilmName() {
+
+    public String getName() {
         return filmName;
     }
 
@@ -56,19 +59,34 @@ public class Film extends Content {
     }
 
     public void setFilmImg(ImageIcon filmImg) {
+        setIcon(filmImg);
         this.filmImg = filmImg;
+
+        //herunder bliver Film's størrelse sat
+        setMaximumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+        setPreferredSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+        setMinimumSize(new Dimension(filmImg.getIconWidth(), filmImg.getIconHeight() + 25));
+    }
+
+    private void setupLayout(){
+        setHorizontalAlignment(0);
+        setBackground(new Color(0, 0, 0));
+        setBorder(new LineBorder(Color.red, 1));
+
+        //herunder håndteres tegningen af texten
+        setText(getName());
+        setHorizontalTextPosition(0);
+        setVerticalTextPosition(3);
+        setForeground(new Color(255, 255, 255));
+
     }
 
     private String genreToString(){
-        String genreString = new String();
+        String genreString = "";
         for (String s: genres) {
             genreString += s+" ";
         }
         return genreString;
-    }
-
-    public void print() {
-        System.out.println(filmName + year + genres[0] + rating);
     }
 
     public void popupInfo(JFrame frame) {
@@ -77,6 +95,5 @@ public class Film extends Content {
         JOptionPane.showMessageDialog(frame,"Film navn "+filmName+"\n Genre: "+genreToString()+
                         "\n Udgivelsees år: "+year+"\n Bedømmese: "+rating,
                 filmName,JOptionPane.PLAIN_MESSAGE);
-
     }
 }
