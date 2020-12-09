@@ -18,6 +18,8 @@ public class GUI {
     private JFrame frame;
     //Denne ArrayList indeholder alle filmne
     private ArrayList<Film> films;
+    //Denne ArrayList indeholder alle serier
+  //  private ArrayList<Media> series;
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
 
@@ -41,7 +43,8 @@ public class GUI {
     GUI() throws FileNotFoundException, IOException {
         frame = new JFrame("GUI");
         films = new ArrayList<Film>();
-        menuGui = new MenuGui(frame.getContentPane(), films);
+        //series = new ArrayList<Media>();
+        menuGui = new MenuGui(frame.getContentPane(), films /*, series*/ );
         loadFilmText();
         loadFilmImages();
         makeFrame();
@@ -133,13 +136,13 @@ public class GUI {
     private void drawFilms(Container contentPane) {
 
         //herunder indsteillles det JPanel som filmområdet bilver tejnet på
-        JPanel filmPanel = new JPanel();
-        filmPanel.setMaximumSize(mediaDimension);
-        filmPanel.setPreferredSize(mediaDimension);
-        filmPanel.setMinimumSize(mediaDimension);
-        filmPanel.setLayout(new GridLayout(1, 5));
-        filmPanel.setBackground(Color.black);
-        filmPanel.setBorder(new LineBorder(Color.red, 5));
+        JPanel mediaPanel = new JPanel();
+        mediaPanel.setMaximumSize(mediaDimension);
+        mediaPanel.setPreferredSize(mediaDimension);
+        mediaPanel.setMinimumSize(mediaDimension);
+        mediaPanel.setLayout(new GridLayout(1, 5));
+        mediaPanel.setBackground(Color.black);
+        mediaPanel.setBorder(new LineBorder(Color.red, 5));
 
         Container filmScrollPane = new ScrollPane();
 
@@ -159,8 +162,8 @@ public class GUI {
         }
 
         filmScrollPane.add(filmBox);
-        filmPanel.add(filmScrollPane);
-        contentPane.add(filmPanel, BorderLayout.SOUTH);
+        mediaPanel.add(filmScrollPane);
+        contentPane.add(mediaPanel, BorderLayout.SOUTH);
     }
 
 
