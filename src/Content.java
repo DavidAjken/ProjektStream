@@ -17,6 +17,7 @@ import javax.swing.border.LineBorder;
 
     public void setName(String name) {
         this.name = name;
+        setText(name);
     }
 
     public String[] getGenre() {

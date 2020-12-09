@@ -1,14 +1,14 @@
 import javax.swing.*;
 
 public class Serier extends Content {
-    protected String serieName;
     protected String[] genres;
     protected String year;
     protected double rating;
     protected String[] season;
 
     public Serier(String serieName, String[] genres, String year, double rating, String[] season) {
-        this.serieName = serieName;
+        this.name = serieName;
+        setText(name);
         this.genres = genres;
         this.year = year;
         this.rating = rating;
