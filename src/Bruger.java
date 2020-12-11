@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+
 public class Bruger {
     protected String username;
     protected String password;
+    protected ArrayList<String> minListe;
 
     public Bruger(String username, String password) {
         this.username = username;
         this.password = password;
+        ArrayList<String> minListe = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -22,6 +26,11 @@ public class Bruger {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public ArrayList<String> getMinListe() {
+        return minListe;
+    }
+
 }
 
 
