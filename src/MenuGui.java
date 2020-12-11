@@ -229,8 +229,11 @@ public class MenuGui {
         Container filmBox = new Container();
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
+        ArrayList<Content> allContent = films;
+        allContent.addAll(series);
 
-        for (Content content : films) {
+
+        for (Content content : allContent) {
             String mediaName = content.getName();
             String[] mediaNames = mediaName.split(" ");
             for (String s : mediaNames) {

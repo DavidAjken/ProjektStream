@@ -11,6 +11,7 @@ public class Serier extends Content {
         this.year = year;
         this.rating = rating;
         this.season = season;
+        setupLayout();
     }
     //get og set metoder til serier, resten er extended til Content
 
