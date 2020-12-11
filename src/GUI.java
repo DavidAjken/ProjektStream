@@ -26,7 +26,7 @@ public class GUI {
     //laver en fil som indeholder alle filmplakaterne
     static final File filmDir = new File("src/filmplakater");
     //laver en fil som indeholder alle serielakaterne
-    static final File serieDir = new File("src/serieplakater");
+    static final File serieDir = new File("src/serieforsider");
 
     //laver et filter der skal bruges til at loade billeder
     static final FilenameFilter IMAGE_FILTER = new FilenameFilter() {
@@ -182,7 +182,7 @@ public class GUI {
 
     private void drawFilms(Container contentPane) {
 
-        //herunder indsteillles det JPanel som filmområdet bilver tejnet på
+        //herunder indstillles det JPanel som filmområdet bilver tejnet på
         JPanel filmPanel = new JPanel();
         filmPanel.setMaximumSize(mediaDimension);
         filmPanel.setPreferredSize(mediaDimension);
