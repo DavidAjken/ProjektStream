@@ -22,9 +22,10 @@ public class GUI {
     private ArrayList<Content> series;
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
-
-    //laver en fil som indeholder alle filmplakaterne
+    //laver en peger på alle filmplakaterne
     static final File filmDir = new File("src/filmplakater");
+    //laver en peger på alle serieforsider
+    static final File seriesDir = new File("src/serieforsider");
 
     //laver et filter der skal bruges til at loade billeder
     static final FilenameFilter IMAGE_FILTER = new FilenameFilter() {
@@ -47,6 +48,8 @@ public class GUI {
         menuGui = new MenuGui(frame.getContentPane(), films , series );
         loadFilmText();
         loadFilmImages();
+        loadSerierText();
+        loadSerierImages();
         makeFrame();
     }
 
@@ -109,9 +112,8 @@ public class GUI {
             filmImg = (ImageIcon) filmImages.get(key);
             film.setImg(filmImg);
         }
-
-
     }
+
     /*
     Denne metode loader alt fra serier.txt ind i en arraylist af film
      */
@@ -122,24 +124,44 @@ public class GUI {
         while (sc.hasNext()) {
             String serieName = sc.next();
             String serieYear = sc.next();
+
             String[] serieGenres;
             String tempGenres = sc.next();
             serieGenres = tempGenres.split(",");
-            String[] serieSE;
-            String tempSE = sc.next();
-            serieSE = tempSE.split(",");
 
             double rating = sc.nextDouble();
-            Serier serie = new Serier(serieName, serieGenres, serieYear, rating, serieSE);
+
+            String[] serieSeasons;
+            String tempSeasons = sc.next();
+            serieSeasons = tempSeasons.split(",");
+
+            Serier serie = new Serier(serieName, serieGenres, serieYear, rating, serieSeasons);
             series.add(serie);
+        }
+    }
+
+    private void loadSerierImages() throws IOException {
+
+        ImageIcon serierImg = null;
+        HashMap<String, ImageIcon> serierImages = new HashMap<>();
+
+        if (seriesDir.isDirectory()) {
+            for (File file : seriesDir.listFiles(IMAGE_FILTER)) {
+                serierImg = new ImageIcon(ImageIO.read(file));
+                serierImages.put(file.getName().split(".jpg")[0], serierImg);
+            }
+        }
+
+        for (Content serie : series) {
+            String key = serie.getName();
+            serierImg = (ImageIcon) serierImages.get(key);
+            serie.setImg(serierImg);
         }
     }
 
     private void drawMenuGui(Container contentPane) {
 
-
         JLabel menuGuiPanel = new JLabel();
-
 
         menuGuiPanel.setMaximumSize(menuDimension);
         menuGuiPanel.setPreferredSize(menuDimension);
@@ -150,7 +172,6 @@ public class GUI {
         menuGuiPanel.setBorder(new LineBorder(Color.red, 5));
 
         menuGuiPanel.add(menuGui.getMenuContainer());
-
 
         contentPane.add(menuGuiPanel, BorderLayout.NORTH);
     }

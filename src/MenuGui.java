@@ -33,15 +33,15 @@ public class MenuGui {
         menuContainer.add(menuArea, BorderLayout.CENTER);
         addLAndRSpacers(menuContainer);
 
-        menuArea.setLayout(new GridLayout(1, 0, 10, 0));
+        menuArea.setLayout(new GridLayout(1, 0, 50, 0));
 
         filmArea.setLayout(new BorderLayout());
-        filmArea.add(movieButtonSetup(), BorderLayout.EAST);
-        filmArea.add(warMovieButtonSetup(), BorderLayout.WEST);
+        filmArea.add(movieButtonSetup(), BorderLayout.WEST);
+        filmArea.add(warMovieButtonSetup(), BorderLayout.EAST);
 
         seriesArea.setLayout(new BorderLayout());
-        seriesArea.add(seriesButtonSetup(), BorderLayout.EAST);
-        seriesArea.add(dramaSeriesButtonSetup(), BorderLayout.WEST);
+        seriesArea.add(seriesButtonSetup(), BorderLayout.WEST);
+        seriesArea.add(dramaSeriesButtonSetup(), BorderLayout.EAST);
 
         searchingArea.setLayout(new BorderLayout());
         searchingArea.add(searchingAreaSetup(), BorderLayout.CENTER);
@@ -58,8 +58,8 @@ public class MenuGui {
     Denne metode står for at give plads i siderne så knapperne ikke er lige op af kanterne
      */
     private void addLAndRSpacers(Container container) {
-        container.add(setupSpacer(100, 100), BorderLayout.WEST);
-        container.add(setupSpacer(100, 100), BorderLayout.EAST);
+        container.add(setupSpacer(300, 100), BorderLayout.WEST);
+        container.add(setupSpacer(300, 100), BorderLayout.EAST);
     }
 
     private Container setupSpacer(int xSize, int ySize) {
@@ -162,11 +162,11 @@ public class MenuGui {
     Denne metode står for at lave war movie knappen
      */
     private JButton dramaSeriesButtonSetup() {
-        JButton warMovieButton = generalButtonSetup("DramaSerier");
-        warMovieButton.addActionListener(
+        JButton dramaSeriesButton = generalButtonSetup("Drama serier");
+        dramaSeriesButton.addActionListener(
                 e -> dramaSeriseSelect()
         );
-        return warMovieButton;
+        return dramaSeriesButton;
     }
 
     private void dramaSeriseSelect() {
