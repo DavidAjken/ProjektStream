@@ -92,7 +92,7 @@ public class GUI {
             JOptionPane.showMessageDialog(frame, "Ikke alle serieforsider kunne findes",
                     "serieforsider fejl", JOptionPane.PLAIN_MESSAGE);
         }
-        
+
         makeFrame();
     }
 
