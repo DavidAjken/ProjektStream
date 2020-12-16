@@ -10,6 +10,7 @@
             this.year = year;
             this.rating = rating;
             this.SE = SE;
+            setupLayout();
         }
         //get og set metoder til serier, resten er extended til Content.
 

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ProjektStream:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a8fb1b0-4ead-46b1-89d0-4bc919cb8eb5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ProjektStream_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Bruger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Content.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Film.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/GUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/MenuGui.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/ProjektStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Serier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/film.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/12 Angry Men.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/2001 A Space Odyssey.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/A Clockwork Orange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/A Philadelphia Story.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/A Place In The Sun.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/A Streetcar Named Desire.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/All Quiet On The Western Front.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Amadeus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/American Graffiti.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/An American In Paris.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Annie Hall.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Apocalypse Now.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Ben Hur.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Bonny And Clyde.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Braveheart.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Butch Cassidy And The Sundance Kid.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Casablanca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Chinatown.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Citizen Kane.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/City Lights.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Close Encounters.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Dances With Wolves.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Doctor Zhivago.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Double Indemnity.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Dr. Strangelove Or How I Learned To Stop Worrying And Love The Bomb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/ET.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Fargo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Forrest Gump.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/From Here To Eternity.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Giant.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Gladiator.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Gone With The Wind.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Good Will Hunting.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Goodfellas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Grapes Of Wrath.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/High Noon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/It Happened One Night.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/It's A Wonderful Life.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Jaws.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Jurassic Park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Lawrence Of Arabia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Lord Of The Rings - The Return Of The King.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Midnight Cowboy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Mr Smith Goes To Washington.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Mutiny On The Bounty.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/My Fair Lady.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Nashville.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Network.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/North By Northwest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/On The Waterfront.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/One Flew Over The Cuckoo's Nest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Patton.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Platoon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Psycho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Pulp Fiction.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Raging Bull.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Raiders Of The Lost Ark.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Rain Man.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Rear Window.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Rebel Without A Cause.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Rocky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Saving Private Ryan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Schindler's List.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Shane.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Singin' In The Rain.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Some Like It Hot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Stagecoach.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Star Wars.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Sunset Boulevard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Taxi Driver.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Terms of Endearment.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The African Queen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Apartment.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Best Years Of Our Lives.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Bridge Over The River Kwai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Deer Hunter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Exorcist.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The French Connection.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Godfather part II.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Godfather.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Good, The Bad And The Ugly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Graduate.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Great Dictator.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Green Mile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Maltese Falcon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Pianist.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Searchers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Shawshank Redemption.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Silence Of The Lambs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Sound Of Music.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Third Man.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Treasure Of The Sierra Madre.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/The Wizard Of Oz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Titanic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/To Kill A Mockingbird.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Unforgiven.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Vertigo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/West Side Story.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Wuthering Heights.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/filmplakater/Yankee Doodle Dandy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Alfred Hitchcock Presents.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/All In The Family.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Ally McBeal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Angel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Arrested Development.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Band Of Brothers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Banshee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Batman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Battlestar Galactica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Better Call Saul.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Big Little Lies.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Billions.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Boardwalk Empire.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Breaking Bad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Buffy The Vampire Slayer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Californication.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Cheers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Crisis In Six Scenes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Curb Your Enthusiasm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Da Ali G Show.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Damages.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Daredevil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Deadwood.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Dekalog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Dexter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Doctor Thorne.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Entourage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Family Ties.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Fargo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Fear The Walking Dead.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Firefly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Flying Blind.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Fraiser.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Freaks And Geeks.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/GLOW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Game Of Thrones.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Girls.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Homeland.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Horace and Pete's.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/House Of Cards.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/House.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/I Claudius.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/I Love Lucy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/It's Garry Shandling's Show.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Jessica Jones.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Justified.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Lonesome Dove.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Lost.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Louie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Lucky Louie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Luke Cage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Mad Men.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Married With Children.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Mr Show With Bob And David.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Night Court.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Northern Exposure.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/On The Air.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Person Of Interest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Planet Earth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Pride And Prejudice.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Ray Donovan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Revenge.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Rome.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Scener ur ett äktenskap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Seinfeld.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Sex &amp; The City.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Shameless.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Show Me A Hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Slings And Arrows.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Smallville.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Sons Of Anarchy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/South Park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Spaced.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Spartacus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Star Trek.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Stranger Things.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Americans.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Civil War.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Defenders.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Honeymooners.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Larry Sanders Show.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Man In The High Castle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Marvelous Mrs Maisel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Punisher.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Shield.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Simpsons.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Sopranos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Strain.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Twilight Zone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Walking Dead.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Way We Live Now.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/The Wire.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Three's Company.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Top Of The Lake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/True Blood.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Twin Peaks.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Tyrant.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/V.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Welt Am Draht.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serier.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serier.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kmQAbHJJQ1kkCPyvwQv8jyW9VJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Uni/1. Semester/GRPRO/projects" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="JAR Application.ProjektStream.jar">
+    <configuration name="ProjektStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProjektStream" />
+      <module name="ProjektStream" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjektStream.jar" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/ProjektStream_jar/ProjektStream.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProjektStream" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a8fb1b0-4ead-46b1-89d0-4bc919cb8eb5" name="Default Changelist" comment="" />
+      <created>1606303145942</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606303145942</updated>
+      <workItem from="1606303146953" duration="1530000" />
+      <workItem from="1606305201239" duration="22000" />
+      <workItem from="1606393031971" duration="4423000" />
+      <workItem from="1606468016238" duration="10210000" />
+      <workItem from="1606899662730" duration="20553000" />
+      <workItem from="1606982767097" duration="8705000" />
+      <workItem from="1607073517067" duration="13147000" />
+      <workItem from="1607335598554" duration="2315000" />
+      <workItem from="1607504319464" duration="13844000" />
+      <workItem from="1607677353762" duration="5194000" />
+      <workItem from="1608109386485" duration="10210000" />
+      <workItem from="1608121725078" duration="1303000" />
+    </task>
+    <task id="LOCAL-00001" summary="lavede gui klasse">
+      <created>1606303479997</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606303479997</updated>
+    </task>
+    <task id="LOCAL-00002" summary="lavede gui makeframe()">
+      <created>1606305176412</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606305176412</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fik JPane til at virke i film området">
+      <created>1606992080853</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606992080853</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="lavede gui klasse" />
+    <MESSAGE value="lavede gui makeframe()" />
+    <MESSAGE value="basic inport" />
+    <MESSAGE value="fik JPane til at virke i film området" />
+    <option name="LAST_COMMIT_MESSAGE" value="fik JPane til at virke i film området" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608111620473">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1608111620473" />
+    <state x="538" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606468220219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="538" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606468220219" />
+    <state x="574" y="126" key="#com.intellij.ide.util.MemberChooser" timestamp="1607086021446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="126" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607086021446" />
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1608123022273">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1608123022273" />
+    <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1606992080232">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="352" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606992080231" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1608112987215">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608112987215" />
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1608122943936">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
+    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1608122943936">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
+    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1608122943936">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
+    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1608122943936">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1608121680238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1608121680238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1608121680238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1608121680238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1608123029086">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608123029086" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1607516192302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1607516192302" />
+    <state x="308" y="146" width="919" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606905277417">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="308" y="146" width="919" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1606905277417" />
+    <state x="0" y="312" width="1263" height="523" key="dock-window-1" timestamp="1607517114666">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="312" width="1263" height="523" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1607517114666" />
+    <state x="425" y="188" key="run.anything.popup" timestamp="1606987098997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="188" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606987098997" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607336133516">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607336133516" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="8" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((MetalTextFieldUI)searchingText.ui).editor" custom="javax.swing.plaf.metal.MetalTextFieldUI" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProjektStream$ProjektStream.ic" NAME="ProjektStream Coverage Results" MODIFIED="1606905304455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
