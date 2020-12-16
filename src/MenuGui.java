@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
@@ -27,6 +29,7 @@ public class MenuGui {
         Container filmArea = new Container();
         Container seriesArea = new Container();
         Container searchingArea = new Container();
+        Container brugerArea = new Container();
 
         menuContainer.setLayout(new BorderLayout(20, 0));
         menuContainer.setBackground(new Color(10, 10, 10));
@@ -46,6 +49,7 @@ public class MenuGui {
         searchingArea.setLayout(new BorderLayout());
         searchingArea.add(searchingAreaSetup(), BorderLayout.CENTER);
 
+        menuArea.add(brugerArea);
         menuArea.add(filmArea);
         menuArea.add(seriesArea);
         menuArea.add(searchingArea);
@@ -104,6 +108,23 @@ public class MenuGui {
         mediaScrollPane.add(mediaBox);
     }
 
+    /*
+    Denne metode laver bruger knappen, samt drop-down menuen for "lod ud" og "Min liste"
+     */
+    private JMenu brugerMenuSetup(){
+        JMenu brugerMenu = new JMenu("Bruger");
+        JMenuItem logUdItem = new JMenuItem("Log ud");
+        brugerMenu.add(logUdItem);
+        logUdItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        JMenuItem minListeItem = new JMenuItem("Min liste");
+        brugerMenu.add(minListeItem);
+        return brugerMenu;
+    }
     /*
     Denne metode står for at lave war movie knappen
      */

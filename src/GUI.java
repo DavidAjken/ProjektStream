@@ -186,6 +186,14 @@ public class GUI {
         mediaPanel.setLayout(new GridLayout(1, 5));
         mediaPanel.setBackground(Color.black);
         mediaPanel.setBorder(new LineBorder(Color.red, 5));
+        //herunder indstillles det JPanel som filmområdet bilver tejnet på
+        JPanel filmPanel = new JPanel();
+        filmPanel.setMaximumSize(mediaDimension);
+        filmPanel.setPreferredSize(mediaDimension);
+        filmPanel.setMinimumSize(mediaDimension);
+        filmPanel.setLayout(new GridLayout(1, 5));
+        filmPanel.setBackground(Color.black);
+        filmPanel.setBorder(new LineBorder(Color.red, 5));
 
         Container filmScrollPane = new ScrollPane();
 
