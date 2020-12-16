@@ -245,6 +245,13 @@ public class GUI {
             );
             filmBox.add(film);
         }
+        for (Content serie : series) {
+
+            //herunder bliver der tilsat en action til newFilm
+            serie.addActionListener(
+                    e -> serie.popupInfo(frame)
+            );
+        }
 
         filmScrollPane.add(filmBox);
         mediaPanel.add(filmScrollPane);
