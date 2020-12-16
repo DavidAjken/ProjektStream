@@ -54,6 +54,9 @@ public class Serier extends Content {
         public void setYear(String year) {
             this.year = year;
         }
+        public void setSeason(String[] Se) {
+            this.SE = SE;
+        }
 
         public void popupInfo(JFrame frame) {
 
