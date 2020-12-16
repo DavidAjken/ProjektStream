@@ -42,7 +42,9 @@ import javax.swing.border.LineBorder;
     public void setImg(ImageIcon img) {
         this.img = img;
         setIcon(img);
-
+        if(img == null){
+            System.out.println("hej");
+        }
         setMaximumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
         setPreferredSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
         setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
