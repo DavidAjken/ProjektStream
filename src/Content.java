@@ -10,6 +10,15 @@ import javax.swing.border.LineBorder;
     protected double rating;
     protected ImageIcon img;
 
+
+    //Vi ved ikke hvorfor men når scanner klassen læser et ä som Ã¤ når den er i en .jar fil
+    protected void checkName() {
+        if (name.contains(" Ã¤")) {
+            String tempName = name.replaceAll("Ã¤", "ä");
+            name = tempName;
+        }
+    }
+
     public String getName() {
         return name;
     }

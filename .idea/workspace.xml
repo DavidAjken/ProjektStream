@@ -5,10 +5,13 @@
       <artifact name="ProjektStream:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3a8fb1b0-4ead-46b1-89d0-4bc919cb8eb5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ProjektStream_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ProjektStream_jar/ProjektStream.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Bruger.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Content.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Film.class" beforeDir="false" />
@@ -219,9 +222,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Tyrant.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/V.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serieforsider/Welt Am Draht.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serier" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/serier.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Serier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,8 +289,15 @@
     </configuration>
     <configuration name="ProjektStream.jar" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/ProjektStream_jar/ProjektStream.jar" />
-      <method v="2" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ProjektStream" />
+      <item itemvalue="JAR Application.ProjektStream.jar" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProjektStream" />
@@ -314,7 +323,7 @@
       <workItem from="1607504319464" duration="13844000" />
       <workItem from="1607677353762" duration="5194000" />
       <workItem from="1608109386485" duration="10210000" />
-      <workItem from="1608121725078" duration="1303000" />
+      <workItem from="1608121725078" duration="4106000" />
     </task>
     <task id="LOCAL-00001" summary="lavede gui klasse">
       <created>1606303479997</created>
@@ -352,10 +361,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="fik JPane til at virke i film området" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608111620473">
+    <state x="548" y="217" key="#BuildArtifactsBeforeRunChooser" timestamp="1608123532232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1608111620473" />
+    <state x="548" y="217" key="#BuildArtifactsBeforeRunChooser/0.0.1536.824@0.0.1536.824" timestamp="1608123532232" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608123541343">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1608123541343" />
     <state x="538" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606468220219">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -364,58 +377,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="126" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607086021446" />
-    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1608123022273">
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1608123868378">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1608123022273" />
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1608123868378" />
     <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1606992080232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="352" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606992080231" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1608112987215">
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1608123426437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608112987215" />
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1608122943936">
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608123426437" />
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom" timestamp="1608125829890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
-    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1608122943936">
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608125829890" />
+    <state width="1493" height="260" key="GridCell.Tab.0.center" timestamp="1608125829890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
-    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1608122943936">
+    <state width="1493" height="260" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608125829890" />
+    <state width="1493" height="260" key="GridCell.Tab.0.left" timestamp="1608125829890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
-    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1608122943936">
+    <state width="1493" height="260" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608125829890" />
+    <state width="1493" height="260" key="GridCell.Tab.0.right" timestamp="1608125829890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608122943936" />
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1608121680238">
+    <state width="1493" height="260" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608125829890" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1608125830379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
-    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1608121680238">
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608125830379" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1608125830379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
-    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1608121680238">
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608125830379" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1608125830378">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
-    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1608121680238">
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608125830378" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1608125830379">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608121680238" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1608123029086">
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608125830379" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1608123873567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608123029086" />
-    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1607516192302">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608123873567" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1608124561587">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1607516192302" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1608124561587" />
     <state x="308" y="146" width="919" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606905277417">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -428,10 +441,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="188" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606987098997" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607336133516">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608123480113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607336133516" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608123480113" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,6 +457,21 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="8" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Serier.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Serier.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Serier.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

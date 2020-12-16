@@ -197,6 +197,7 @@ public class GUI {
 
         for (Content serie : series) {
             String key = serie.getName();
+
             serierImg = (ImageIcon) serierImages.get(key);
             serie.setImg(serierImg);
         }
