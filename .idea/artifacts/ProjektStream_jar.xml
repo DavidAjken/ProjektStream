@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/ProjektStream_jar</output-path>
     <root id="archive" name="ProjektStream.jar">
       <element id="module-output" name="ProjektStream" />
+      <element id="archive" name="archive.jar" />
     </root>
   </artifact>
 </component>
