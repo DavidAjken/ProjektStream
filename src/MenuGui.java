@@ -62,8 +62,8 @@ public class MenuGui {
     Denne metode står for at give plads i siderne så knapperne ikke er lige op af kanterne
      */
     private void addLAndRSpacers(Container container) {
-        container.add(setupSpacer(300, 100), BorderLayout.WEST);
-        container.add(setupSpacer(300, 100), BorderLayout.EAST);
+        container.add(setupSpacer(100, 100), BorderLayout.WEST);
+        container.add(setupSpacer(100, 100), BorderLayout.EAST);
     }
 
     private Container setupSpacer(int xSize, int ySize) {
