@@ -45,24 +45,24 @@ public class GUI {
         frame = new JFrame("GUI");
         films = new ArrayList<Content>();
         series = new ArrayList<Content>();
-        menuGui = new MenuGui(frame.getContentPane(), films , series );
+        menuGui = new MenuGui(frame.getContentPane(), films, series);
 
-        try{
+        try {
             loadFilmText();
             loadFilmImages();
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
 
-        }catch(IOException e){
+        } catch (IOException e) {
             JOptionPane.showMessageDialog(frame, "Filmplakaterne kunne ikke findes",
                     "Film fejl", JOptionPane.PLAIN_MESSAGE);
         }
 
-        try{
+        try {
             loadSerierText();
             loadSerierImages();
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
 
-        }catch(IOException e){
+        } catch (IOException e) {
 
         }
 
