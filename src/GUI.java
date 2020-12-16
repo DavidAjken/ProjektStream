@@ -46,10 +46,26 @@ public class GUI {
         films = new ArrayList<Content>();
         series = new ArrayList<Content>();
         menuGui = new MenuGui(frame.getContentPane(), films , series );
-        loadFilmText();
-        loadFilmImages();
-        loadSerierText();
-        loadSerierImages();
+
+        try{
+            loadFilmText();
+            loadFilmImages();
+        }catch(FileNotFoundException e){
+
+        }catch(IOException e){
+            JOptionPane.showMessageDialog(frame, "Filmplakaterne kunne ikke findes",
+                    "Film fejl", JOptionPane.PLAIN_MESSAGE);
+        }
+
+        try{
+            loadSerierText();
+            loadSerierImages();
+        }catch(FileNotFoundException e){
+
+        }catch(IOException e){
+
+        }
+
         makeFrame();
     }
 
