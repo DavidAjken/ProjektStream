@@ -1,3 +1,4 @@
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,12 +32,16 @@ public class MenuGui {
         Container searchingArea = new Container();
         Container brugerArea = new Container();
 
+
         menuContainer.setLayout(new BorderLayout(20, 0));
         menuContainer.setBackground(new Color(10, 10, 10));
         menuContainer.add(menuArea, BorderLayout.CENTER);
         addLAndRSpacers(menuContainer);
 
         menuArea.setLayout(new GridLayout(1, 0, 50, 0));
+
+        brugerArea.setLayout(new BorderLayout());
+        brugerArea.add(brugerMenuSetup(), BorderLayout.WEST);
 
         filmArea.setLayout(new BorderLayout());
         filmArea.add(movieButtonSetup(), BorderLayout.WEST);
@@ -56,7 +61,6 @@ public class MenuGui {
 
 
     }
-
 
     /*
     Denne metode står for at give plads i siderne så knapperne ikke er lige op af kanterne
@@ -107,22 +111,35 @@ public class MenuGui {
         }
         mediaScrollPane.add(mediaBox);
     }
+/*
+    Metoden som skal oprette menuen til brugeren, nåede ikke at få til at virke grundet mangelnde medlem
+ */
+    private JMenu generalMenuSetup(String name) {
+        JMenu menu = new JMenu(name);
+        menu.setForeground(Color.white);
+        menu.setBackground(new Color(255, 0, 0));
+
+        menu.setMinimumSize(new Dimension(100, 100));
+        menu.setPreferredSize(new Dimension(100, 100));
+        menu.setMaximumSize(new Dimension(100, 100));
+
+        return menu;
+    }
 
     /*
     Denne metode laver bruger knappen, samt drop-down menuen for "lod ud" og "Min liste"
+    virker ikke, grundet tidsmangel
      */
     private JMenu brugerMenuSetup(){
-        JMenu brugerMenu = new JMenu("Bruger");
+        JMenu brugerMenu = generalMenuSetup("Bruger");
         JMenuItem logUdItem = new JMenuItem("Log ud");
         brugerMenu.add(logUdItem);
-        logUdItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        logUdItem.addActionListener(
+                e -> System.exit(0)
+        );
         JMenuItem minListeItem = new JMenuItem("Min liste");
         brugerMenu.add(minListeItem);
+
         return brugerMenu;
     }
     /*

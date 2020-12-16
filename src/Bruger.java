@@ -1,3 +1,6 @@
+/*
+Er ikke implementeret grundet tidsmangel i forbindelse med manglende medlem
+ */
 import java.util.ArrayList;
 
 public class Bruger {
