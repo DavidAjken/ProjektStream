@@ -47,37 +47,38 @@ public class GUI {
         series = new ArrayList<Content>();
         menuGui = new MenuGui(frame.getContentPane(), films, series);
 
-        try{
+        try {
             loadFilmText();
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
 
-        }catch(NullPointerException e){
+        } catch (NullPointerException e) {
 
         }
 
         try {
-
             loadFilmImages();
-        } catch (FileNotFoundException e) {
-
         } catch (IOException e) {
             JOptionPane.showMessageDialog(frame, "Filmplakaterne kunne ikke findes",
                     "Film fejl", JOptionPane.PLAIN_MESSAGE);
-        }
-
-        try{
-            loadSerierText();
-        }catch(FileNotFoundException e){
-
-        }catch(NullPointerException e){
+        } catch (NullPointerException e) {
 
         }
 
         try {
-            loadSerierImages();
+            loadSerierText();
         } catch (FileNotFoundException e) {
 
+        } catch (NullPointerException e) {
+
+        }
+
+
+        try {
+            loadSerierImages();
         } catch (IOException e) {
+            JOptionPane.showMessageDialog(frame, "Filmplakaterne kunne ikke findes",
+                    "Film fejl", JOptionPane.PLAIN_MESSAGE);
+        } catch (NullPointerException e) {
 
         }
 
