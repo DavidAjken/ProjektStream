@@ -1,18 +1,18 @@
 
     import javax.swing.*;
     public class Serier extends Content{
-        protected String name;
-        protected String[] genres;
+
         protected String year;
-        protected double rating;
         protected String[] SE;
 
         public Serier(String name, String[] genres, String year, double rating, String[] SE) {
             this.name = name;
+            setText(name);
             this.genres = genres;
             this.year = year;
             this.rating = rating;
             this.SE = SE;
+            setupLayout();
         }
         //get og set metoder til serier, resten er extended til Content.
 

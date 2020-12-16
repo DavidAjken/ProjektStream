@@ -155,6 +155,11 @@ public class GUI {
         for (Content serie : series) {
             String key = serie.getName();
             serierImg = (ImageIcon) serierImages.get(key);
+            if (serierImg==null){
+
+                System.out.println("hej "+serie.getText());
+                continue;
+            }
             serie.setImg(serierImg);
         }
     }
