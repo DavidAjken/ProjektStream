@@ -46,10 +46,53 @@ public class GUI {
         films = new ArrayList<Content>();
         series = new ArrayList<Content>();
         menuGui = new MenuGui(frame.getContentPane(), films , series );
-        loadFilmText();
-        loadFilmImages();
-        loadSerierText();
-        loadSerierImages();
+        menuGui = new MenuGui(frame.getContentPane(), films, series);
+
+        try {
+            loadFilmText();
+
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(frame, "Film infromation kunne ikke findes",
+                    "film.txt fejl", JOptionPane.PLAIN_MESSAGE);
+
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(frame, "Film infromation indeholder ikke\n alt den infromation den skulle",
+                    "film.txt fejl", JOptionPane.PLAIN_MESSAGE);
+        }
+
+        try {
+            loadFilmImages();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(frame, "Filmplakaterne kunne ikke findes",
+                    "filmplakater fejl", JOptionPane.PLAIN_MESSAGE);
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(frame, "Ikke alle filmplakaterne kunne findes",
+                    "filmplakater fejl", JOptionPane.PLAIN_MESSAGE);
+        }
+
+        try {
+            loadSerierText();
+
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(frame, "Serier infromation kunne ikke findes",
+                    "serier.txt fejl", JOptionPane.PLAIN_MESSAGE);
+
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(frame, "Serie infromation indeholder ikke\n alt den infromation den skulle",
+                    "serier.txt fejl", JOptionPane.PLAIN_MESSAGE);
+        }
+
+
+        try {
+            loadSerierImages();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(frame, "Serieforsider kunne ikke findes",
+                    "serieforsider fejl", JOptionPane.PLAIN_MESSAGE);
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(frame, "Ikke alle serieforsider kunne findes",
+                    "serieforsider fejl", JOptionPane.PLAIN_MESSAGE);
+        }
+
         makeFrame();
     }
 
@@ -201,6 +244,13 @@ public class GUI {
                     e -> film.popupInfo(frame)
             );
             filmBox.add(film);
+        }
+        for (Content serie : series) {
+
+            //herunder bliver der tilsat en action til newFilm
+            serie.addActionListener(
+                    e -> serie.popupInfo(frame)
+            );
         }
 
         filmScrollPane.add(filmBox);
