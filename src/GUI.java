@@ -47,8 +47,16 @@ public class GUI {
         series = new ArrayList<Content>();
         menuGui = new MenuGui(frame.getContentPane(), films, series);
 
-        try {
+        try{
             loadFilmText();
+        }catch(FileNotFoundException e){
+
+        }catch(NullPointerException e){
+
+        }
+
+        try {
+
             loadFilmImages();
         } catch (FileNotFoundException e) {
 
@@ -57,8 +65,15 @@ public class GUI {
                     "Film fejl", JOptionPane.PLAIN_MESSAGE);
         }
 
-        try {
+        try{
             loadSerierText();
+        }catch(FileNotFoundException e){
+
+        }catch(NullPointerException e){
+
+        }
+
+        try {
             loadSerierImages();
         } catch (FileNotFoundException e) {
 
