@@ -16,10 +16,10 @@ public class Film extends Content {
     }
 
     public void popupInfo(JFrame frame) {
-
-        JOptionPane.showMessageDialog(frame, "Film navn " + name + "\n Genre: " + genreToString() +
+        Object[] options = {"Play", "Back"};
+        JOptionPane.showOptionDialog(frame, "Film navn " + name + "\n Genre: " + genreToString() +
                         "\n Udgivelsees år: " + year + "\n Bedømmese: " + rating,
-                name, JOptionPane.PLAIN_MESSAGE);
+                name, JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
     }
 
 
