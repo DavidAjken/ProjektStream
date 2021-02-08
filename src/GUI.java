@@ -1,14 +1,6 @@
 import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FilenameFilter;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
-import javax.imageio.ImageIO;
 import javax.swing.*;
-
 import javax.swing.border.LineBorder;
 
 
@@ -22,77 +14,19 @@ public class GUI {
     private ArrayList<Content> series;
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
-    //laver en peger på alle filmplakaterne
-    static final File filmDir = new File("src/filmplakater");
-    //laver en peger på alle serieforsider
-    static final File seriesDir = new File("src/serieforsider");
 
-    //laver et filter der skal bruges til at loade billeder
-    static final FilenameFilter IMAGE_FILTER = new FilenameFilter() {
-        @Override
-        public boolean accept(File dir, String name) {
-            if (name.endsWith(".jpg")) {
-                return true;
-            }
-            return false;
-        }
-    };
+
+
 
     Dimension menuDimension;
     Dimension contentDimension;
 
-    GUI() throws FileNotFoundException, IOException {
+    GUI() {
         frame = new JFrame("GUI");
         films = new ArrayList<Content>();
         series = new ArrayList<Content>();
         menuGui = new MenuGui(frame.getContentPane(), films , series );
         menuGui = new MenuGui(frame.getContentPane(), films, series);
-
-        try {
-            loadFilmText();
-
-        } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(frame, "Film infromation kunne ikke findes",
-                    "film.txt fejl", JOptionPane.PLAIN_MESSAGE);
-
-        } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(frame, "Film infromation indeholder ikke\n alt den infromation den skulle",
-                    "film.txt fejl", JOptionPane.PLAIN_MESSAGE);
-        }
-
-        try {
-            loadFilmImages();
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(frame, "Filmplakaterne kunne ikke findes",
-                    "filmplakater fejl", JOptionPane.PLAIN_MESSAGE);
-        } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(frame, "Ikke alle filmplakaterne kunne findes",
-                    "filmplakater fejl", JOptionPane.PLAIN_MESSAGE);
-        }
-
-        try {
-            loadSerierText();
-
-        } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(frame, "Serier infromation kunne ikke findes",
-                    "serier.txt fejl", JOptionPane.PLAIN_MESSAGE);
-
-        } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(frame, "Serie infromation indeholder ikke\n alt den infromation den skulle",
-                    "serier.txt fejl", JOptionPane.PLAIN_MESSAGE);
-        }
-
-
-        try {
-            loadSerierImages();
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(frame, "Serieforsider kunne ikke findes",
-                    "serieforsider fejl", JOptionPane.PLAIN_MESSAGE);
-        } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(frame, "Ikke alle serieforsider kunne findes",
-                    "serieforsider fejl", JOptionPane.PLAIN_MESSAGE);
-        }
-
         makeFrame();
     }
 
@@ -112,95 +46,6 @@ public class GUI {
         drawMenuGui(contentPane);
         drawFilms(contentPane);
         frame.setVisible(true);
-    }
-
-    /*
-    Denne metode loader alt fra film.txt ind i en arraylist af film
-     */
-    private void loadFilmText() throws FileNotFoundException {
-        Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("film.txt"));
-        sc.useDelimiter("\\s*;\\s*");
-
-        while (sc.hasNext()) {
-            String filmName = sc.next();
-            int filmYear = sc.nextInt();
-            String[] filmGenres;
-            String tempGenres = sc.next();
-            filmGenres = tempGenres.split(",");
-
-            double rating = sc.nextDouble();
-            Film film = new Film(filmName, filmGenres, filmYear, rating);
-            films.add(film);
-        }
-    }
-
-    /*
-    denne metoder loader filmplakater fra filmplakater mappen
-    og tildeler hver film i ArrayLsiten films en plakat der tilhørre den relevatne film
-     */
-    private void loadFilmImages() throws IOException {
-
-        ImageIcon filmImg = null;
-        HashMap<String, ImageIcon> filmImages = new HashMap<>();
-
-        if (filmDir.isDirectory()) {
-            for (File file : filmDir.listFiles(IMAGE_FILTER)) {
-                filmImg = new ImageIcon(ImageIO.read(file));
-                filmImages.put(file.getName().split(".jpg")[0], filmImg);
-            }
-        }
-
-        for (Content film : films) {
-            String key = film.getName();
-            filmImg = (ImageIcon) filmImages.get(key);
-            film.setImg(filmImg);
-        }
-    }
-
-    /*
-    Denne metode loader alt fra serier.txt ind i en arraylist af film
-     */
-    private void loadSerierText() throws FileNotFoundException {
-        Scanner sc = new Scanner(getClass().getClassLoader().getResourceAsStream("serier.txt"));
-        sc.useDelimiter("\\s*;\\s*");
-
-        while (sc.hasNext()) {
-            String serieName = sc.next();
-            String serieYear = sc.next();
-
-            String[] serieGenres;
-            String tempGenres = sc.next();
-            serieGenres = tempGenres.split(",");
-
-            double rating = sc.nextDouble();
-
-            String[] serieSeasons;
-            String tempSeasons = sc.next();
-            serieSeasons = tempSeasons.split(",");
-
-            Serier serie = new Serier(serieName, serieGenres, serieYear, rating, serieSeasons);
-            series.add(serie);
-        }
-    }
-
-    private void loadSerierImages() throws IOException {
-
-        ImageIcon serierImg = null;
-        HashMap<String, ImageIcon> serierImages = new HashMap<>();
-
-        if (seriesDir.isDirectory()) {
-            for (File file : seriesDir.listFiles(IMAGE_FILTER)) {
-                serierImg = new ImageIcon(ImageIO.read(file));
-                serierImages.put(file.getName().split(".jpg")[0], serierImg);
-            }
-        }
-
-        for (Content serie : series) {
-            String key = serie.getName();
-
-            serierImg = (ImageIcon) serierImages.get(key);
-            serie.setImg(serierImg);
-        }
     }
 
     private void drawMenuGui(Container contentPane) {

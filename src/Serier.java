@@ -33,10 +33,11 @@ public class Serier extends Content {
     }
 
     public void popupInfo(JFrame frame) {
-        Object[] options = {"Play", "Back"};
-        JOptionPane.showOptionDialog(frame, "Serie navn " + name + "\n Genre: " + genreToString() +
+
+        //JOptionPane info = new JOptionPane("hej",);
+        JOptionPane.showMessageDialog(frame, "Serie navn " + name + "\n Genre: " + genreToString() +
                         "\n Aktive år: " + year + "\n Bedømmese: " + rating,
-                name, JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
+                name, JOptionPane.PLAIN_MESSAGE);
     }
 
 }

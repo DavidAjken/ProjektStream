@@ -146,7 +146,7 @@ public class MenuGui {
     Denne metode står for at lave war movie knappen
      */
     private JButton warMovieButtonSetup() {
-        JButton warMovieButton = generalButtonSetup("Krigsfilm");
+        JButton warMovieButton = generalButtonSetup("Krigs film");
         warMovieButton.addActionListener(
                 e -> warMovieSelect()
         );
@@ -200,7 +200,7 @@ public class MenuGui {
     Denne metode står for at lave war movie knappen
      */
     private JButton dramaSeriesButtonSetup() {
-        JButton dramaSeriesButton = generalButtonSetup("Dramaserier");
+        JButton dramaSeriesButton = generalButtonSetup("Drama serier");
         dramaSeriesButton.addActionListener(
                 e -> dramaSeriseSelect()
         );
