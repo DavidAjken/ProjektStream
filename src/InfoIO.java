@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -17,11 +18,12 @@ public class InfoIO {
 
     //ArrayLists der indeholder info om film
     private ArrayList<String[]> filmTexts;
-    private ArrayList<ImageIcon> filmImages;
+
+    private HashMap<String, ImageIcon> filmImages;
 
     //ArrayLists der indeholder info om serier
     private ArrayList<String[]> serierTexts;
-    private ArrayList<ImageIcon> serierImages;
+    private HashMap<String, ImageIcon> serierImages;
 
     //inex for den regefølge film infromationen bliver hæntet
     public static final int FILM_NAME = 0;
@@ -50,9 +52,9 @@ public class InfoIO {
 
     public InfoIO() throws FileNotFoundException, IOException {
         filmTexts = new ArrayList<>();
-        filmImages = new ArrayList<>();
+        filmImages = new HashMap<>();
         serierTexts = new ArrayList<>();
-        serierImages = new ArrayList<>();
+        serierImages = new HashMap<>();
         loadFilmText();
         loadFilmImages();
         loadSerierText();
@@ -81,8 +83,10 @@ public class InfoIO {
      */
     private void loadFilmImages() throws IOException {
         if (filmDir.isDirectory()) {
+            ImageIcon filmImg = null;
             for (File file : filmDir.listFiles(IMAGE_FILTER)) {
-                filmImages.add(new ImageIcon(ImageIO.read(file)));
+                filmImg = new ImageIcon(ImageIO.read(file));
+                filmImages.put(file.getName().split(".jpg")[0], filmImg);
             }
         }
     }
@@ -107,8 +111,10 @@ public class InfoIO {
 
     private void loadSerierImages() throws IOException {
         if (seriesDir.isDirectory()) {
+            ImageIcon seriesImg = null;
             for (File file : seriesDir.listFiles(IMAGE_FILTER)) {
-                serierImages.add(new ImageIcon(ImageIO.read(file)));
+                seriesImg = new ImageIcon(ImageIO.read(file));
+                serierImages.put(file.getName().split(".jpg")[0],seriesImg);
             }
         }
     }
@@ -117,7 +123,7 @@ public class InfoIO {
         return filmTexts;
     }
 
-    public ArrayList<ImageIcon> getFilmImages() {
+    public HashMap<String, ImageIcon> getFilmImages() {
         return filmImages;
     }
 
@@ -125,7 +131,7 @@ public class InfoIO {
         return serierTexts;
     }
 
-    public ArrayList<ImageIcon> getSerierImages() {
+    public HashMap<String, ImageIcon> getSerierImages() {
         return serierImages;
     }
 

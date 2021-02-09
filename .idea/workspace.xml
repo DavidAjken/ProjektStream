@@ -34,16 +34,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a8fb1b0-4ead-46b1-89d0-4bc919cb8eb5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/ProjektStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/ProjektStream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InfoHandeler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InfoHandeler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InfoIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InfoIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjektStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjektStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Serier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Series.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
