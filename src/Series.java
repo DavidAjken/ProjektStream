@@ -1,17 +1,17 @@
 
 import javax.swing.*;
 
-public class Serier extends Content {
+public class Series extends Content {
     protected String year;
-    protected String[] SE;
+    protected String[] seasons;
 
-    public Serier(String name, String[] genres, String year, double rating, String[] SE) {
+    public Series(String name, String[] genres, String year, double rating, String[] seasons) {
         this.name = name;
         checkName();
         this.genres = genres;
         this.year = year;
         this.rating = rating;
-        this.SE = SE;
+        this.seasons = seasons;
         setupLayout();
     }
 
@@ -21,15 +21,15 @@ public class Serier extends Content {
     }
 
     public String[] getSE() {
-        return SE;
+        return seasons;
     }
 
     public void setYear(String year) {
         this.year = year;
     }
 
-    public void setSeason(String[] Se) {
-        this.SE = SE;
+    public void setSeason(String[] seasons) {
+        this.seasons = seasons;
     }
 
     public void popupInfo(JFrame frame) {

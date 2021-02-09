@@ -8,10 +8,7 @@ public class GUI {
 
     //Dette er den JFrame som bliver vist når programmet kørre
     private JFrame frame;
-    //Denne ArrayList indeholder alle filmne
-    private ArrayList<Content> films;
-    //Denne ArrayList indeholder alle serierne
-    private ArrayList<Content> series;
+
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
 
@@ -22,12 +19,11 @@ public class GUI {
     Dimension contentDimension;
 
     GUI() {
-        frame = new JFrame("GUI");
-        films = new ArrayList<Content>();
-        series = new ArrayList<Content>();
-        menuGui = new MenuGui(frame.getContentPane(), films , series );
-        menuGui = new MenuGui(frame.getContentPane(), films, series);
-        makeFrame();
+ //       frame = new JFrame("GUI");
+
+ //       menuGui = new MenuGui(frame.getContentPane(), films , series );
+   //     menuGui = new MenuGui(frame.getContentPane(), films, series);
+  //      makeFrame();
     }
 
     private void makeFrame() {
@@ -82,7 +78,7 @@ public class GUI {
 
         Container filmBox = new Container();
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
-
+/*
         for (Content film : films) {
 
             //herunder bliver der tilsat en action til newFilm
@@ -102,6 +98,8 @@ public class GUI {
         filmScrollPane.add(filmBox);
         mediaPanel.add(filmScrollPane);
         contentPane.add(mediaPanel, BorderLayout.SOUTH);
+
+ */
     }
 
 

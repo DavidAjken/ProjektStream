@@ -1,7 +1,8 @@
 
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.LineBorder;
+/*skal fjernes:*/import java.awt.*;
+/*skal fjernes:*/import javax.swing.border.LineBorder;
+import javax.swing.*;/*skal ændres til efter Draw klassen er lavet: import javax.swing.ImageIcon;*/
+
 
 //diverse ens metoder i film og serier som kan samles i en abstract klasse
     public abstract class Content extends JButton {

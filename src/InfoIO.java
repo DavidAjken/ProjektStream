@@ -1,5 +1,5 @@
 import javax.imageio.ImageIO;
-import javax.swing.*;
+import javax.swing.ImageIcon;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
@@ -22,6 +22,19 @@ public class InfoIO {
     //ArrayLists der indeholder info om serier
     private ArrayList<String[]> serierTexts;
     private ArrayList<ImageIcon> serierImages;
+
+    //inex for den regefølge film infromationen bliver hæntet
+    public static final int FILM_NAME = 0;
+    public static final int FILM_YEAR = 1;
+    public static final int FILM_GENRES = 2;
+    public static final int FILM_RATING = 3;
+
+    //inex for den regefølge serie infromationen bliver hæntet
+    public static final int SERIES_NAME = 0;
+    public static final int SERIES_YEAR = 1;
+    public static final int SERIES_GENERS = 2;
+    public static final int SERIES_RATING = 3;
+    public static final int SERIES_SEASONS = 4;
 
 
     //laver et filter der skal bruges til at loade billeder
@@ -57,8 +70,8 @@ public class InfoIO {
             String filmName = sc.next();
             String filmYear = sc.next();
             String filmGenres = sc.next();
-            double rating = sc.nextDouble();
-            String[] filmText = new String[]{filmName, filmYear, filmGenres, "" + rating};
+            String rating = sc.next();
+            String[] filmText = new String[]{filmName, filmYear, filmGenres, rating};
             filmTexts.add(filmText);
         }
     }
@@ -85,9 +98,9 @@ public class InfoIO {
             String serieName = sc.next();
             String serieYear = sc.next();
             String serieGenres = sc.next();
-            double rating = sc.nextDouble();
+            String rating = sc.next();
             String serieSeasons = sc.next();
-            String[] serieText = new String[]{serieName, serieYear, serieGenres, "" + rating, serieSeasons};
+            String[] serieText = new String[]{serieName, serieYear, serieGenres, rating, serieSeasons};
             serierTexts.add(serieText);
         }
     }
@@ -95,7 +108,6 @@ public class InfoIO {
     private void loadSerierImages() throws IOException {
         if (seriesDir.isDirectory()) {
             for (File file : seriesDir.listFiles(IMAGE_FILTER)) {
-
                 serierImages.add(new ImageIcon(ImageIO.read(file)));
             }
         }
@@ -116,4 +128,5 @@ public class InfoIO {
     public ArrayList<ImageIcon> getSerierImages() {
         return serierImages;
     }
+
 }
