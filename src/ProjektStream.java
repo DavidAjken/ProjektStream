@@ -3,7 +3,7 @@ import java.io.IOException;
 
 public class ProjektStream {
     public static void main(String[] args) throws IOException {
-        new InfoHandeler();
-      //  new GUI();
+
+        new GUI(new InfoHandeler());
     }
 }

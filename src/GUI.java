@@ -12,18 +12,64 @@ public class GUI {
     //Denne MenuGui håndtere alt hvad menuen kan
     private MenuGui menuGui;
 
+    private ArrayList<JButton> films;
 
-
+    private ArrayList<JButton> series;
 
     Dimension menuDimension;
     Dimension contentDimension;
 
-    GUI() {
- //       frame = new JFrame("GUI");
+    InfoHandeler infoHandeler;
 
- //       menuGui = new MenuGui(frame.getContentPane(), films , series );
-   //     menuGui = new MenuGui(frame.getContentPane(), films, series);
-  //      makeFrame();
+    GUI(InfoHandeler infoHandeler) {
+        films = new ArrayList<>();
+        series = new ArrayList<>();
+        this.infoHandeler = infoHandeler;
+        setups(infoHandeler);
+
+        frame = new JFrame("GUI");
+
+        setups(infoHandeler);
+
+        menuGui = new MenuGui(frame.getContentPane(), films, series, infoHandeler);
+
+        makeFrame();
+    }
+
+    private void setups(InfoHandeler infoHandeler) {
+        setupFilmsButtons();
+        setupSeriesButtons();
+
+        setupFilmPopUp();
+        setupSeriesPopUp();
+    }
+
+    public void setupFilmsButtons() {
+        makeContentButtons(infoHandeler.getFilms(), films);
+    }
+
+    public void setupSeriesButtons() {
+        makeContentButtons(infoHandeler.getSeries(), series);
+    }
+
+    public void setupFilmPopUp() {
+        for (JButton film : films) {
+            film.addActionListener(e -> {
+                Film filmInfo = infoHandeler.getFilm(film.getText());
+                JOptionPane.showMessageDialog(frame, filmInfo.popupInfoString(),
+                        film.getText(), JOptionPane.PLAIN_MESSAGE);
+            });
+        }
+    }
+
+    public void setupSeriesPopUp() {
+        for (JButton serie : series) {
+            serie.addActionListener(e -> {
+                Series serieInfo = infoHandeler.getSerie(serie.getText());
+                JOptionPane.showMessageDialog(frame, serieInfo.popupInfoString(),
+                        serie.getText(), JOptionPane.PLAIN_MESSAGE);
+            });
+        }
     }
 
     private void makeFrame() {
@@ -78,29 +124,40 @@ public class GUI {
 
         Container filmBox = new Container();
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
-/*
-        for (Content film : films) {
-
-            //herunder bliver der tilsat en action til newFilm
-            film.addActionListener(
-                    e -> film.popupInfo(frame)
-            );
+        for (JButton film : films) {
             filmBox.add(film);
-        }
-        for (Content serie : series) {
-
-            //herunder bliver der tilsat en action til newFilm
-            serie.addActionListener(
-                    e -> serie.popupInfo(frame)
-            );
         }
 
         filmScrollPane.add(filmBox);
         mediaPanel.add(filmScrollPane);
         contentPane.add(mediaPanel, BorderLayout.SOUTH);
-
- */
     }
 
+    private void makeContentButtons(Content[] contents, ArrayList<JButton> buttons) {
+        JButton contentButton = new JButton();
+        for (Content content : contents) {
+
+            contentButton.setName(content.getName());
+            contentButton.setIcon(content.getImg());
+            contentButton.setHorizontalAlignment(0);
+            contentButton.setBackground(new Color(0, 0, 0));
+            contentButton.setBorder(new LineBorder(Color.red, 1));
+
+            contentButton.setText(contentButton.getName());
+            contentButton.setHorizontalTextPosition(0);
+            contentButton.setVerticalTextPosition(3);
+            contentButton.setForeground(new Color(255, 255, 255));
+            buttons.add(contentButton);
+        }
+    }
 
 }
+/*
+        setIcon(img);
+        setMaximumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+        setPreferredSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+        setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
+
+
+
+ */

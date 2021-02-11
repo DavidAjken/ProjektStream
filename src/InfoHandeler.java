@@ -5,17 +5,19 @@ import java.util.HashMap;
 
 public class InfoHandeler {
     //Denne ArrayList indeholder alle filmne
-    private ArrayList<Content> films;
+    private HashMap<String,Content> films;
     //Denne ArrayList indeholder alle serierne
-    private ArrayList<Content> series;
+    private HashMap<String,Content> series;
 
 
     public InfoHandeler() throws IOException {
-        films = new ArrayList<Content>();
-        series = new ArrayList<Content>();
+        films = new HashMap<>();
+        series = new HashMap<>();
         loadInfo();
     }
-
+    /*
+    Denne metode og dens under metoder står for at intage information udefra ved hjælp af InfoIO klassen
+     */
     private void loadInfo() throws IOException {
         InfoIO infoIO = new InfoIO();
         loadFilmText(infoIO);
@@ -32,17 +34,15 @@ public class InfoHandeler {
             String tempGenres = info[InfoIO.FILM_GENRES];
             genres = tempGenres.split(",");
 
-            int year = Integer.parseInt(info[InfoIO.FILM_YEAR]);
-
             double rating = Double.parseDouble(info[InfoIO.FILM_RATING].replace(',', '.'));
 
-            films.add(new Film(info[InfoIO.FILM_NAME], genres, year, rating));
+            films.put(info[InfoIO.FILM_NAME],new Film(info[InfoIO.FILM_NAME], genres, rating, info[InfoIO.FILM_YEAR]));
         }
     }
 
     private void loadFilmImages(InfoIO infoIO) {
         HashMap<String, ImageIcon> images = infoIO.getFilmImages();
-        for (Content film : films) {
+        for (Content film : films.values()) {
             film.setImg(images.get(film.getName()));
         }
     }
@@ -61,16 +61,31 @@ public class InfoHandeler {
             String tempSeasons = info[InfoIO.SERIES_SEASONS];
             seasons = tempGenres.split(",");
 
-            series.add(new Series(info[InfoIO.SERIES_NAME], genres, info[InfoIO.SERIES_YEAR], rating,seasons));
+            series.put(info[InfoIO.SERIES_NAME],new Series(info[InfoIO.SERIES_NAME], genres, rating, info[InfoIO.SERIES_YEAR], seasons));
         }
     }
 
     private void loadSeriesImages(InfoIO infoIO) {
         HashMap<String, ImageIcon> images = infoIO.getFilmImages();
-        for (Content serie : series) {
+        for (Content serie : series.values()) {
             serie.setImg(images.get(serie.getName()));
         }
     }
 
-
+    // returns the film array
+    public Content[] getFilms() {
+        return films.values().toArray(Content[]::new);
+    }
+    // returns the series array
+    public Content[] getSeries() {
+        return series.values().toArray(Content[]::new);
+    }
+    // returns a sigle element form the films array
+    public Film getFilm(String contentName){
+        return (Film) films.get(contentName);
+    }
+    // returns a sigle element form the series array
+    public Series getSerie(String contentName){
+        return (Series) series.get(contentName);
+    }
 }

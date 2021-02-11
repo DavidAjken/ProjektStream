@@ -14,10 +14,14 @@ public class MenuGui {
 
     Container menuContainer;
     Container externalContainer;
-    ArrayList<Content> films;
-    ArrayList<Content> series;
+    ArrayList<JButton> films;
+    ArrayList<JButton> series;
 
-    public MenuGui(Container externalContainer, ArrayList<Content> films, ArrayList<Content> series) {
+    InfoHandeler infoHandeler;
+
+
+    public MenuGui(Container externalContainer, ArrayList<JButton> films, ArrayList<JButton> series, InfoHandeler infoHandeler) {
+        this.infoHandeler = infoHandeler;
         this.externalContainer = externalContainer;
         this.films = films;
         this.series = series;
@@ -92,7 +96,7 @@ public class MenuGui {
         return button;
     }
 
-    /*   /*
+    /*
     Denne metode står for det alle valg metoderne skal kunne/have i menuen for film
      */
     private void generalMovieGenreSelect(String genre) {
@@ -102,18 +106,19 @@ public class MenuGui {
         Container mediaBox = new Container();
         mediaBox.setLayout(new GridLayout(0, 8, 10, 10));
 
-        for (Content film : films) {
+        for (Content film : infoHandeler.getFilms()) {
             for (String gerne : film.getGenre()) {
                 if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
-                    mediaBox.add(film);
+                    //       mediaBox.add(film);
                 }
             }
         }
         mediaScrollPane.add(mediaBox);
     }
-/*
-    Metoden som skal oprette menuen til brugeren, nåede ikke at få til at virke grundet mangelnde medlem
- */
+
+    /*
+        Metoden som skal oprette menuen til brugeren, nåede ikke at få til at virke grundet mangelnde medlem
+     */
     private JMenu generalMenuSetup(String name) {
         JMenu menu = new JMenu(name);
         menu.setForeground(Color.white);
@@ -130,7 +135,7 @@ public class MenuGui {
     Denne metode laver bruger knappen, samt drop-down menuen for "lod ud" og "Min liste"
     virker ikke, grundet tidsmangel
      */
-    private JMenu brugerMenuSetup(){
+    private JMenu brugerMenuSetup() {
         JMenu brugerMenu = generalMenuSetup("Bruger");
         JMenuItem logUdItem = new JMenuItem("Log ud");
         brugerMenu.add(logUdItem);
@@ -142,6 +147,7 @@ public class MenuGui {
 
         return brugerMenu;
     }
+
     /*
     Denne metode står for at lave war movie knappen
      */
@@ -186,10 +192,10 @@ public class MenuGui {
         Container mediaBox = new Container();
         mediaBox.setLayout(new GridLayout(0, 8, 10, 10));
 
-        for (Content serie : series) {
+        for (Content serie : infoHandeler.getSeries()) {
             for (String gerne : serie.getGenre()) {
                 if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
-                    mediaBox.add(serie);
+                    //                  mediaBox.add(serie);
                 }
             }
         }
@@ -267,16 +273,16 @@ public class MenuGui {
         Container filmBox = new Container();
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
-        ArrayList<Content> allContent = films;
+        ArrayList<JButton> allContent = films;
         allContent.addAll(series);
 
 
-        for (Content content : allContent) {
+        for (JButton content : allContent) {
             String mediaName = content.getName();
             String[] mediaNames = mediaName.split(" ");
             for (String s : mediaNames) {
                 if (s.equals(searchingText)) {
-                    filmBox.add(content);
+                    //                  filmBox.add(content);
                 }
             }
 
