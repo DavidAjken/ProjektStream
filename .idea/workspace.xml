@@ -35,18 +35,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3a8fb1b0-4ead-46b1-89d0-4bc919cb8eb5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/Content.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/Film.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/MenuGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/MenuGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/ProjektStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/ProjektStream.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InfoHandeler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InfoHandeler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjektStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjektStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Series.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Series.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,46 +213,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608123426437" />
-    <state width="1493" height="260" key="GridCell.Tab.0.bottom" timestamp="1613049212334">
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1613570756341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
-    <state width="1493" height="260" key="GridCell.Tab.0.center" timestamp="1613049212334">
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613570756341" />
+    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1613570756341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
-    <state width="1493" height="260" key="GridCell.Tab.0.left" timestamp="1613049212334">
+    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613570756341" />
+    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1613570756341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
-    <state width="1493" height="260" key="GridCell.Tab.0.right" timestamp="1613049212334">
+    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613570756341" />
+    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1613570756341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1613049212334">
+    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613570756341" />
+    <state width="1493" height="211" key="GridCell.Tab.1.bottom" timestamp="1613570712327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
-    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1613049212334">
+    <state width="1493" height="211" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613570712327" />
+    <state width="1493" height="211" key="GridCell.Tab.1.center" timestamp="1613570712327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
-    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1613049212334">
+    <state width="1493" height="211" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613570712327" />
+    <state width="1493" height="211" key="GridCell.Tab.1.left" timestamp="1613570712327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
-    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1613049212334">
+    <state width="1493" height="211" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613570712327" />
+    <state width="1493" height="211" key="GridCell.Tab.1.right" timestamp="1613570712327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613049212334" />
+    <state width="1493" height="211" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613570712327" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1612799683211">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612799683211" />
-    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1608124561587">
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1613570551733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1608124561587" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1613570551733" />
     <state x="308" y="146" width="919" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606905277417">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -293,16 +287,21 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GUI.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="19" />
+          <line>50</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/InfoHandeler.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((MetalTextFieldUI)searchingText.ui).editor" custom="javax.swing.plaf.metal.MetalTextFieldUI" />
-      </configuration>
-    </watches-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="GUI" memberName="films" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProjektStream$ProjektStream.ic" NAME="ProjektStream Coverage Results" MODIFIED="1606905304455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

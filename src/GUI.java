@@ -40,8 +40,7 @@ public class GUI {
         setupFilmsButtons();
         setupSeriesButtons();
 
-        setupFilmPopUp();
-        setupSeriesPopUp();
+        setupPopUp();
     }
 
     public void setupFilmsButtons() {
@@ -52,7 +51,30 @@ public class GUI {
         makeContentButtons(infoHandeler.getSeries(), series);
     }
 
-    public void setupFilmPopUp() {
+    private void makeContentButtons(Content[] contents, ArrayList<JButton> buttons) {
+
+        for (Content content : contents) {
+            JButton contentButton = new JButton();
+            Dimension iconDimention = new Dimension(content.getImg().getIconWidth(), content.getImg().getIconHeight() + 25);
+
+            contentButton.setName(content.getName());
+            contentButton.setIcon(content.getImg());
+            contentButton.setMaximumSize(iconDimention);
+            contentButton.setPreferredSize(iconDimention);
+            contentButton.setMinimumSize(iconDimention);
+            contentButton.setHorizontalAlignment(0);
+            contentButton.setBackground(new Color(0, 0, 0));
+            contentButton.setBorder(new LineBorder(Color.red, 1));
+
+            contentButton.setText(contentButton.getName());
+            contentButton.setHorizontalTextPosition(0);
+            contentButton.setVerticalTextPosition(3);
+            contentButton.setForeground(new Color(255, 255, 255));
+            buttons.add(contentButton);
+        }
+    }
+
+    public void setupPopUp() {
         for (JButton film : films) {
             film.addActionListener(e -> {
                 Film filmInfo = infoHandeler.getFilm(film.getText());
@@ -60,9 +82,7 @@ public class GUI {
                         film.getText(), JOptionPane.PLAIN_MESSAGE);
             });
         }
-    }
-
-    public void setupSeriesPopUp() {
+        /*
         for (JButton serie : series) {
             serie.addActionListener(e -> {
                 Series serieInfo = infoHandeler.getSerie(serie.getText());
@@ -70,6 +90,7 @@ public class GUI {
                         serie.getText(), JOptionPane.PLAIN_MESSAGE);
             });
         }
+         */
     }
 
     private void makeFrame() {
@@ -81,6 +102,7 @@ public class GUI {
         contentDimension = new Dimension(frame.getWidth(), frame.getHeight() - 135);
 
         Container contentPane = frame.getContentPane();
+
         contentPane.setBackground(new Color(155, 5, 5));
         contentPane.setLayout(new BorderLayout());
 
@@ -133,31 +155,4 @@ public class GUI {
         contentPane.add(mediaPanel, BorderLayout.SOUTH);
     }
 
-    private void makeContentButtons(Content[] contents, ArrayList<JButton> buttons) {
-        JButton contentButton = new JButton();
-        for (Content content : contents) {
-
-            contentButton.setName(content.getName());
-            contentButton.setIcon(content.getImg());
-            contentButton.setHorizontalAlignment(0);
-            contentButton.setBackground(new Color(0, 0, 0));
-            contentButton.setBorder(new LineBorder(Color.red, 1));
-
-            contentButton.setText(contentButton.getName());
-            contentButton.setHorizontalTextPosition(0);
-            contentButton.setVerticalTextPosition(3);
-            contentButton.setForeground(new Color(255, 255, 255));
-            buttons.add(contentButton);
-        }
-    }
-
 }
-/*
-        setIcon(img);
-        setMaximumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
-        setPreferredSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
-        setMinimumSize(new Dimension(img.getIconWidth(), img.getIconHeight() + 25));
-
-
-
- */

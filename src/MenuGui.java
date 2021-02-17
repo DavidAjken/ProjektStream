@@ -7,6 +7,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.accessibility.AccessibleContext;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 
 import static java.awt.image.BufferedImage.TYPE_INT_RGB;
 
@@ -96,25 +97,6 @@ public class MenuGui {
         return button;
     }
 
-    /*
-    Denne metode står for det alle valg metoderne skal kunne/have i menuen for film
-     */
-    private void generalMovieGenreSelect(String genre) {
-        JPanel mediaPanel = (JPanel) externalContainer.getComponent(1);
-        ScrollPane mediaScrollPane = (ScrollPane) mediaPanel.getComponent(0);
-        mediaScrollPane.removeAll();
-        Container mediaBox = new Container();
-        mediaBox.setLayout(new GridLayout(0, 8, 10, 10));
-
-        for (Content film : infoHandeler.getFilms()) {
-            for (String gerne : film.getGenre()) {
-                if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
-                    //       mediaBox.add(film);
-                }
-            }
-        }
-        mediaScrollPane.add(mediaBox);
-    }
 
     /*
         Metoden som skal oprette menuen til brugeren, nåede ikke at få til at virke grundet mangelnde medlem
@@ -148,24 +130,7 @@ public class MenuGui {
         return brugerMenu;
     }
 
-    /*
-    Denne metode står for at lave war movie knappen
-     */
-    private JButton warMovieButtonSetup() {
-        JButton warMovieButton = generalButtonSetup("Krigs film");
-        warMovieButton.addActionListener(
-                e -> warMovieSelect()
-        );
-        return warMovieButton;
-    }
 
-    private void warMovieSelect() {
-        generalMovieGenreSelect("War");
-    }
-
-    /*
-    Denne metode står for at lave movie knappen
-     */
     private JButton movieButtonSetup() {
         JButton movieButton = generalButtonSetup("Film");
         movieButton.addActionListener(
@@ -174,13 +139,41 @@ public class MenuGui {
         return movieButton;
     }
 
-    /*
-    Denne metode står for at tegne alle filmne på media området
-     */
+    private JButton warMovieButtonSetup() {
+        JButton warMovieButton = generalButtonSetup("Krigs film");
+        warMovieButton.addActionListener(
+                e -> warMovieSelect()
+        );
+        return warMovieButton;
+    }
+
     private void movieSelect() {
         generalMovieGenreSelect("");
     }
 
+    private void warMovieSelect() {
+        generalMovieGenreSelect("War");
+    }
+
+    /*
+    Denne metode står for det alle valg metoderne skal kunne/have i menuen for film
+    */
+    private void generalMovieGenreSelect(String genre) {
+        JPanel mediaPanel = (JPanel) externalContainer.getComponent(1);
+        ScrollPane mediaScrollPane = (ScrollPane) mediaPanel.getComponent(0);
+        mediaScrollPane.removeAll();
+        Container mediaBox = new Container();
+        mediaBox.setLayout(new GridLayout(0, 8, 10, 10));
+
+        for (Content film : infoHandeler.getFilms()) {
+            for (String gerne : film.getGenre()) {
+                if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
+                    mediaBox.add(addContent(film));
+                }
+            }
+        }
+        mediaScrollPane.add(mediaBox);
+    }
 
     /*
     Denne metode står for det alle valg metoderne skal kunne/have i menuen for film
@@ -195,11 +188,29 @@ public class MenuGui {
         for (Content serie : infoHandeler.getSeries()) {
             for (String gerne : serie.getGenre()) {
                 if (gerne.equals(" " + genre) || gerne.equals(genre) || genre.equals("")) {
-                    //                  mediaBox.add(serie);
+                    mediaBox.add(addContent(serie));
                 }
             }
         }
         mediaScrollPane.add(mediaBox);
+    }
+
+    private JButton addContent(Content content) {
+        JButton contentButton = new JButton();
+        contentButton.setName(content.getName());
+        contentButton.setIcon(content.getImg());
+        contentButton.setMaximumSize(new Dimension(contentButton.getIcon().getIconWidth(), contentButton.getIcon().getIconHeight() + 25));
+        contentButton.setPreferredSize(new Dimension(contentButton.getIcon().getIconWidth(), contentButton.getIcon().getIconHeight() + 25));
+        contentButton.setMinimumSize(new Dimension(contentButton.getIcon().getIconWidth(), contentButton.getIcon().getIconHeight() + 25));
+        contentButton.setHorizontalAlignment(0);
+        contentButton.setBackground(new Color(0, 0, 0));
+        contentButton.setBorder(new LineBorder(Color.red, 1));
+
+        contentButton.setText(contentButton.getName());
+        contentButton.setHorizontalTextPosition(0);
+        contentButton.setVerticalTextPosition(3);
+        contentButton.setForeground(new Color(255, 255, 255));
+        return contentButton;
     }
 
     /*
@@ -282,7 +293,7 @@ public class MenuGui {
             String[] mediaNames = mediaName.split(" ");
             for (String s : mediaNames) {
                 if (s.equals(searchingText)) {
-                    //                  filmBox.add(content);
+                    filmBox.add(content);
                 }
             }
 

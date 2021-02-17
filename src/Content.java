@@ -27,6 +27,7 @@ import javax.swing.*;/*skal ændres til efter Draw klassen er lavet: import java
         }
     }
 
+
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
     public String[] getGenre() {return genres;}

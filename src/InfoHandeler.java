@@ -66,7 +66,7 @@ public class InfoHandeler {
     }
 
     private void loadSeriesImages(InfoIO infoIO) {
-        HashMap<String, ImageIcon> images = infoIO.getFilmImages();
+        HashMap<String, ImageIcon> images = infoIO.getSerierImages();
         for (Content serie : series.values()) {
             serie.setImg(images.get(serie.getName()));
         }
