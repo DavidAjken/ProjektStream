@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javax.accessibility.AccessibleContext;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -15,8 +16,8 @@ public class MenuGui {
 
     Container menuContainer;
     Container externalContainer;
-    ArrayList<JButton> films;
-    ArrayList<JButton> series;
+    HashMap<String, JButton> films = new HashMap<>();
+    HashMap<String, JButton> series = new HashMap<>();
 
     InfoHandeler infoHandeler;
 
@@ -24,8 +25,13 @@ public class MenuGui {
     public MenuGui(Container externalContainer, ArrayList<JButton> films, ArrayList<JButton> series, InfoHandeler infoHandeler) {
         this.infoHandeler = infoHandeler;
         this.externalContainer = externalContainer;
-        this.films = films;
-        this.series = series;
+
+        for (JButton film : films) {
+            this.films.put(film.getText(), film);
+        }
+        for (JButton serie : series) {
+            this.films.put(serie.getText(), serie);
+        }
         menuGuiSetup();
     }
 
@@ -196,7 +202,8 @@ public class MenuGui {
     }
 
     private JButton addContent(Content content) {
-        JButton contentButton = new JButton();
+        return films.get(content.getName());
+        /*JButton contentButton = new JButton();
         contentButton.setName(content.getName());
         contentButton.setIcon(content.getImg());
         contentButton.setMaximumSize(new Dimension(contentButton.getIcon().getIconWidth(), contentButton.getIcon().getIconHeight() + 25));
@@ -211,6 +218,8 @@ public class MenuGui {
         contentButton.setVerticalTextPosition(3);
         contentButton.setForeground(new Color(255, 255, 255));
         return contentButton;
+
+         */
     }
 
     /*
@@ -284,8 +293,9 @@ public class MenuGui {
         Container filmBox = new Container();
         filmBox.setLayout(new GridLayout(0, 8, 10, 10));
 
-        ArrayList<JButton> allContent = films;
-        allContent.addAll(series);
+        ArrayList<JButton> allContent = new ArrayList<>();
+        allContent.addAll(films.values());
+        allContent.addAll(series.values());
 
 
         for (JButton content : allContent) {

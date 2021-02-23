@@ -19,35 +19,28 @@ public class GUI {
     Dimension menuDimension;
     Dimension contentDimension;
 
-    InfoHandeler infoHandeler;
 
     GUI(InfoHandeler infoHandeler) {
         films = new ArrayList<>();
         series = new ArrayList<>();
-        this.infoHandeler = infoHandeler;
         setups(infoHandeler);
 
         frame = new JFrame("GUI");
-
-        setups(infoHandeler);
-
         menuGui = new MenuGui(frame.getContentPane(), films, series, infoHandeler);
 
         makeFrame();
     }
 
     private void setups(InfoHandeler infoHandeler) {
-        setupFilmsButtons();
-        setupSeriesButtons();
-
-        setupPopUp();
+        setupFilmsButtons(infoHandeler);
+        setupSeriesButtons(infoHandeler);
     }
 
-    public void setupFilmsButtons() {
+    public void setupFilmsButtons(InfoHandeler infoHandeler) {
         makeContentButtons(infoHandeler.getFilms(), films);
     }
 
-    public void setupSeriesButtons() {
+    public void setupSeriesButtons(InfoHandeler infoHandeler) {
         makeContentButtons(infoHandeler.getSeries(), series);
     }
 
@@ -71,26 +64,9 @@ public class GUI {
             contentButton.setVerticalTextPosition(3);
             contentButton.setForeground(new Color(255, 255, 255));
             buttons.add(contentButton);
+            contentButton.addActionListener(e -> JOptionPane.showMessageDialog(frame, content.popupInfoString(),
+                    content.getName(), JOptionPane.PLAIN_MESSAGE));
         }
-    }
-
-    public void setupPopUp() {
-        for (JButton film : films) {
-            film.addActionListener(e -> {
-                Film filmInfo = infoHandeler.getFilm(film.getText());
-                JOptionPane.showMessageDialog(frame, filmInfo.popupInfoString(),
-                        film.getText(), JOptionPane.PLAIN_MESSAGE);
-            });
-        }
-        /*
-        for (JButton serie : series) {
-            serie.addActionListener(e -> {
-                Series serieInfo = infoHandeler.getSerie(serie.getText());
-                JOptionPane.showMessageDialog(frame, serieInfo.popupInfoString(),
-                        serie.getText(), JOptionPane.PLAIN_MESSAGE);
-            });
-        }
-         */
     }
 
     private void makeFrame() {
