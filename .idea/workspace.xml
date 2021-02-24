@@ -28,15 +28,20 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:reExamMain" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a8fb1b0-4ead-46b1-89d0-4bc919cb8eb5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjektStream/MenuGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjektStream/MenuGui.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InfoHandeler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InfoHandeler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InfoIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InfoIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjektStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjektStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/film.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/film.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +92,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProjektStream.jar" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/ProjektStream_jar/ProjektStream.jar" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -129,7 +145,8 @@
       <workItem from="1612799653683" duration="30000" />
       <workItem from="1613048100344" duration="1104000" />
       <workItem from="1613740449411" duration="7000" />
-      <workItem from="1614089354727" duration="1614000" />
+      <workItem from="1614089354727" duration="1990000" />
+      <workItem from="1614167925062" duration="1772000" />
     </task>
     <task id="LOCAL-00001" summary="lavede gui klasse">
       <created>1606303479997</created>
@@ -152,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606992080853</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="prgrammet virker som det skulle">
+      <created>1614091263290</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614091263290</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +187,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -176,7 +212,8 @@
     <MESSAGE value="lavede gui makeframe()" />
     <MESSAGE value="basic inport" />
     <MESSAGE value="fik JPane til at virke i film området" />
-    <option name="LAST_COMMIT_MESSAGE" value="fik JPane til at virke i film området" />
+    <MESSAGE value="prgrammet virker som det skulle" />
+    <option name="LAST_COMMIT_MESSAGE" value="prgrammet virker som det skulle" />
   </component>
   <component name="WindowStateProjectService">
     <state x="548" y="217" key="#BuildArtifactsBeforeRunChooser" timestamp="1608123532232">
@@ -195,44 +232,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="126" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607086021446" />
-    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612799572706">
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1614091356958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614091356958" />
     <state x="499" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1612799572706" />
     <state x="330" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612875629303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="330" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1612875629303" />
-    <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1606992080232">
+    <state x="352" y="0" key="CommitChangelistDialog2" timestamp="1614091262560">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="352" y="0" key="CommitChangelistDialog2/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614091262560" />
     <state x="352" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606992080231" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1614169711820">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1614169711820" />
     <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1608123426437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608123426437" />
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1614090537120">
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1614091216972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614090537120" />
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614091216972" />
     <state width="1877" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824/3.-1200.1920.1160@3.-1200.1920.1160" timestamp="1614089800356" />
     <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613571165828" />
-    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1614090537120">
+    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1614091216972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614090537120" />
+    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614091216972" />
     <state width="1877" height="211" key="GridCell.Tab.0.center/0.0.1536.824/3.-1200.1920.1160@3.-1200.1920.1160" timestamp="1614089800356" />
     <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613571165828" />
-    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1614090537120">
+    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1614091216972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614090537120" />
+    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614091216972" />
     <state width="1877" height="211" key="GridCell.Tab.0.left/0.0.1536.824/3.-1200.1920.1160@3.-1200.1920.1160" timestamp="1614089800356" />
     <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613571165828" />
-    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1614090537120">
+    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1614091216972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614090537120" />
+    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614091216972" />
     <state width="1877" height="211" key="GridCell.Tab.0.right/0.0.1536.824/3.-1200.1920.1160@3.-1200.1920.1160" timestamp="1614089800356" />
     <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613571165828" />
     <state width="1493" height="211" key="GridCell.Tab.1.bottom" timestamp="1614090450093">
@@ -259,9 +302,10 @@
     <state width="1493" height="211" key="GridCell.Tab.1.right/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614090450093" />
     <state width="1877" height="211" key="GridCell.Tab.1.right/0.0.1536.824/3.-1200.1920.1160@3.-1200.1920.1160" timestamp="1614089802922" />
     <state width="1493" height="211" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613571165825" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1612799683211">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1614091361280">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824/3.-1200.1920.1160@0.0.1536.824" timestamp="1614091361280" />
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612799683211" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1614090129394">
       <screen x="0" y="0" width="1536" height="824" />
@@ -303,13 +347,8 @@
           <option name="timeStamp" value="8" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MenuGui.java</url>
-          <line>175</line>
+          <line>176</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>

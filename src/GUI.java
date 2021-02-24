@@ -25,10 +25,22 @@ public class GUI {
         series = new ArrayList<>();
         setups(infoHandeler);
 
+
         frame = new JFrame("GUI");
         menuGui = new MenuGui(frame.getContentPane(), films, series, infoHandeler);
 
         makeFrame();
+        if (infoHandeler.hasErrores()){
+            makeErrormessiges(infoHandeler.getErrorMessiges());
+        }
+    }
+
+    private void makeErrormessiges(ArrayList<String> errorMessiges) {
+        for (String errorMessige: errorMessiges) {
+            JOptionPane.showMessageDialog(frame, errorMessige,
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
     }
 
     private void setups(InfoHandeler infoHandeler) {

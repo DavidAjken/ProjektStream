@@ -12,7 +12,7 @@ Vertigo; 1958; Mystery, Romance, Thriller; 8,3;
 Psycho; 1960; Horror, Mystery, Thriller; 8,5;
 The Godfather part II; 1974; Crime, Drama; 9;
 On The Waterfront; 1954; Crime, Drama, Thriller; 8,2;
-Sunset Boulevard; 1950; Drama, Film-Noir; 8,4;
+Sunset Boulevard; 1950; Drama, Film-Noi½r; 8,4;
 Forrest Gump; 1994; Drama, Romance; 8,8;
 The Sound Of Music; 1965; Biography, Drama, Family, Musical; 8,0;
 12 Angry Men; 1957; Crime, Drama; 8,9;

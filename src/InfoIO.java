@@ -18,12 +18,14 @@ public class InfoIO {
 
     //ArrayLists der indeholder info om film
     private ArrayList<String[]> filmTexts;
-
     private HashMap<String, ImageIcon> filmImages;
 
     //ArrayLists der indeholder info om serier
     private ArrayList<String[]> serierTexts;
     private HashMap<String, ImageIcon> serierImages;
+
+    //Hvis der er nogen errores bliver error messegen gemt i dette HashMap
+    private ArrayList errorMesseges;
 
     //inex for den regefølge film infromationen bliver hæntet
     public static final int FILM_NAME = 0;
@@ -31,12 +33,13 @@ public class InfoIO {
     public static final int FILM_GENRES = 2;
     public static final int FILM_RATING = 3;
 
-    //inex for den regefølge serie infromationen bliver hæntet
+    //index for den regefølge serie infromationen bliver hæntet
     public static final int SERIES_NAME = 0;
     public static final int SERIES_YEAR = 1;
     public static final int SERIES_GENERS = 2;
     public static final int SERIES_RATING = 3;
     public static final int SERIES_SEASONS = 4;
+
 
 
     //laver et filter der skal bruges til at loade billeder
@@ -50,15 +53,36 @@ public class InfoIO {
         }
     };
 
-    public InfoIO() throws FileNotFoundException, IOException {
+    public InfoIO() {
         filmTexts = new ArrayList<>();
         filmImages = new HashMap<>();
         serierTexts = new ArrayList<>();
         serierImages = new HashMap<>();
-        loadFilmText();
-        loadFilmImages();
-        loadSerierText();
-        loadSerierImages();
+        errorMesseges = new ArrayList<>();
+
+        try {
+            loadFilmText();
+        } catch (FileNotFoundException e) {
+            errorMesseges.add("Films info not found");
+        }
+
+        try {
+            loadFilmImages();
+        } catch (IOException e) {
+            errorMesseges.add("Films image not found");
+        }
+
+        try {
+            loadSerierText();
+        } catch (FileNotFoundException e) {
+            errorMesseges.add("Series info not found");
+        }
+
+        try {
+            loadSerierImages();
+        } catch (IOException e) {
+            errorMesseges.add("Series image not found");
+        }
     }
 
     /*
@@ -114,7 +138,7 @@ public class InfoIO {
             ImageIcon seriesImg = null;
             for (File file : seriesDir.listFiles(IMAGE_FILTER)) {
                 seriesImg = new ImageIcon(ImageIO.read(file));
-                serierImages.put(file.getName().split(".jpg")[0],seriesImg);
+                serierImages.put(file.getName().split(".jpg")[0], seriesImg);
             }
         }
     }
@@ -135,4 +159,7 @@ public class InfoIO {
         return serierImages;
     }
 
+    public ArrayList<String> getErrorMessiges() {
+        return errorMesseges;
+    }
 }
